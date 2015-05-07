@@ -1,0 +1,143 @@
+﻿body 
+{
+    
+}
+
+#divCabecera
+{
+    height:150px;
+    background-color:#FF7800;
+    color:White;
+    border:1px dashed #A64E06;
+    box-shadow:0px 0px 10px #000; 
+    position:relative;
+    z-index:2;      
+}
+
+#divContenidoCabecera
+{
+    width:960px;
+    margin:auto;
+}
+
+#divMenu
+{
+    height:45px;
+    background-color:#A64E06;
+    border-radius:0px 0px 10px 10px;  
+    box-shadow:0px 0px 10px #000 inset;
+    text-align:center;
+}
+
+    #divMenu ul
+    {
+        list-style-type:none;
+        padding:2px;
+        margin:0px;
+    }
+
+    #divMenu ul li
+    {
+        display:inline-block;
+        padding:10px;
+        cursor:pointer;
+        background-color:#FF9A40;
+        color:#A64E06;
+        box-shadow:0px 0px 5px #000 inset;
+    
+    }
+
+        #divMenu ul li a
+        {
+            display:block;
+            color:#A64E06;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+#divLogo
+{
+    width:35%;
+    float:left;   
+    text-align:center;
+    margin-top:10px;
+}
+
+    #divLogo img
+    {
+        box-shadow:0px 0px 10px #000;
+        width:85px;
+        height:85px;
+    }
+
+#divTitulo
+{
+    width:65%;
+    float:left;
+    text-shadow:2px 2px 3px #000;
+}
+
+#divCuerpo
+{
+    width:960px;
+    margin:auto;
+    background-color:#FF9A40;
+    border-radius:0px 0px 20px 20px;   
+    overflow:auto;
+    box-shadow:0px 0px 10px #000;
+}
+
+#divHomeCuerpoIzq, #divHomeCuerpoDer
+{
+    float:left;
+    width:20%;
+    min-height:500px;
+}
+
+#divHomeCuerpoMed
+{
+    float:left;
+    width:60%;
+    min-height:500px;
+    background-color:White;
+    box-shadow:0px 0px 10px #000 inset;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+#divFooter
+{
+    #height:30px;
+    background-color:#A64E06;
+    border-radius:0px 0px 20px 20px;
+    clear:both;
+    box-shadow:0px 0px 5px #000 inset;
+    color:White;
+    text-align:center;
+    padding-top:5px;
+    position:relative;
+    z-index:2;   
+}
+
+#menuVertical
+{
+    list-style-type:none;
+    padding:0px;
+    margin:50px 0px;
+    font-weight:bold;
+}
+
+    #menuVertical li
+    {
+        padding:10px;
+        text-align:center;
+        background-color:#A64E06;
+        border:1px outset #A64E06;
+        box-shadow:0px 0px 10px #000 inset;
+    }
+     
+        #menuVertical li a
+        {
+            text-decoration:none;
+            color:White;
+        }

@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Administracion.master.cs" Inherits="WebApplication_TP1.MasterAdministracion.Administracion" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentHomeCenterIzq" runat="server">
+
+    <ul id="menuVertical">
+        <li> <a href="/MasterAdministracion/RegEquipo.aspx">RegEquipo.aspx</a> </li>
+        <li> <a href="/MasterAdministracion/RegJugador.aspx">RegJugador.aspx</a> </li>
+        <li> <a href="/MasterAdministracion/RegTorneo.aspx">RegTorneo.aspx</a> </li>
+    </ul>
+
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentHomeCenterMed" runat="server">
+
+    <asp:ContentPlaceHolder ID="ContentAdministracionCenterMed" runat="server"></asp:ContentPlaceHolder>
+
+</asp:Content>

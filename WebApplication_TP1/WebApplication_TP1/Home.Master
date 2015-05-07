@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="WebApplication_TP1.Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Home</title>
+
+        <%--BootStrap--%>
+        <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <script src="js/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+        <%--BootStrap--%>
+      
+        <%--jQuery--%>
+        <script src="js/jquery/jquery-2.1.4.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery-ui.js" type="text/javascript"></script>
+        <%--jQuery--%>
+
+        <%--css--%>
+        <link href="css/EstilosGenericos.css" rel="stylesheet" type="text/css" />
+        <%--css--%>
+
+        <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    </head>
+    <body>
+        <form id="formMaster" runat="server">
+            <div id="divHomeMaster">
+
+                <div id="divCabecera">
+                    <div id="divContenidoCabecera">
+
+                        <div id="divMenu">
+
+                            <ul>
+                                <li> <a href="/ContenidoHome.aspx">Home</a> </li>
+                                <li><a href="/MasterEquipos/ListadoEquipos.aspx">Resumen de Equipos</a></li>
+                                <li><a href="/MasterAdministracion/RegTorneo.aspx">Administración</a></li>
+                            </ul>
+                            
+                            <%--<div id="divContenidoMenu" class="container">
+                                <div class="navbar navbar-inverse">
+                                    <div class="container-fluid">
+                                        <div class="navbar-collapse collapse" style="height: 1px;">
+                                            <ul class="nav navbar-nav">
+                                                <li class="active">                                                   
+                                                    <a href="/ContenidoHome.aspx">
+                                                        <span class="glyphicon glyphicon-home"></span> Home
+                                                    </a>
+                                                </li>
+                                                <li><a href="/MasterEquipos/ListadoEquipos.aspx">Resumen de Equipos</a></li>
+                                                <li><a href="/MasterAdministracion/RegTorneo.aspx">Administración</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>--%>
+                        </div>
+                    
+
+                        <div id="divLogo">
+                            <img src="/img/Balon_de_futbol.png" alt="Logo Balón"/>
+                        </div>
+
+                        <div id="divTitulo">
+                            <h1>Club de Fútbol</h1>
+                        </div>
+
+                    </div>
+                </div>    
+            
+                <div id="divCuerpo">
+            
+                    <div id="divHomeCuerpoIzq">
+                        <asp:ContentPlaceHolder ID="ContentHomeCenterIzq" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+
+                    <div id="divHomeCuerpoMed">
+                        <asp:ContentPlaceHolder ID="ContentHomeCenterMed" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+
+                    <div id="divHomeCuerpoDer">
+                        
+                    </div>
+
+                    <div id="divFooter">
+                        <%--Se debe llamar a un User Control--%>
+
+                        <asp:Label ID="Label1" runat="server" Text="- Universidad Nacional de La Matanza."/>
+                        <br/>
+                        <asp:Label ID="Label2" runat="server" Text="- Dpto. de Ingeniería e Investigaciones Tecnológicas."/>
+                        <br/>
+                        <asp:Label ID="Label3" runat="server" Text="- Integrantes:"/>
+                        <br/>
+                        <asp:Label ID="Label4" runat="server" Text="Anabela Rossi"/>
+                        <br/>
+                        <asp:Label ID="Label5" runat="server" Text="Emiliano Zambrano"/>
+                        <br/>
+                        <asp:Label ID="Label6" runat="server" Text="Juan Sobrile"/>
+
+                        
+                        
+                        
+                         
+                                       
+                                       
+                                       
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+        </form>
+    </body>
+</html>

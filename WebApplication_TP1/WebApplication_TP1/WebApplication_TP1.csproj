@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2ECEA2B9-FE11-46BD-86DF-D9FF06A2CC7B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication_TP1</RootNamespace>
+    <AssemblyName>WebApplication_TP1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContenidoHome.aspx" />
+    <Content Include="css\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap\css\bootstrap.css" />
+    <Content Include="css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="css\EstilosGenericos.css" />
+    <Content Include="font\bootstrap\font\glyphicons-halflings-regular.svg" />
+    <Content Include="img\Balon_de_futbol.png" />
+    <Content Include="js\bootstrap\js\bootstrap.js" />
+    <Content Include="js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="js\ie10-viewport-bug-workaround.js" />
+    <Content Include="js\jquery\jquery-2.1.4.js" />
+    <Content Include="js\jquery\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery\jquery-ui.js" />
+    <Content Include="js\jquery\jquery-ui.min.js" />
+    <Content Include="MasterAdministracion\RegEquipo.aspx" />
+    <Content Include="MasterAdministracion\RegJugador.aspx" />
+    <Content Include="MasterAdministracion\RegTorneo.aspx" />
+    <Content Include="MasterEquipos\ListadoEquipos.aspx" />
+    <Content Include="MasterEquipos\RegContacto.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContenidoHome.aspx.cs">
+      <DependentUpon>ContenidoHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContenidoHome.aspx.designer.cs">
+      <DependentUpon>ContenidoHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\Administracion.master.cs">
+      <DependentUpon>Administracion.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\Administracion.master.designer.cs">
+      <DependentUpon>Administracion.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\NestedMasterPage1.master.cs">
+      <DependentUpon>NestedMasterPage1.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\NestedMasterPage1.master.designer.cs">
+      <DependentUpon>NestedMasterPage1.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\RegEquipo.aspx.cs">
+      <DependentUpon>RegEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\RegEquipo.aspx.designer.cs">
+      <DependentUpon>RegEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\RegJugador.aspx.cs">
+      <DependentUpon>RegJugador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\RegJugador.aspx.designer.cs">
+      <DependentUpon>RegJugador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\RegTorneo.aspx.cs">
+      <DependentUpon>RegTorneo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\RegTorneo.aspx.designer.cs">
+      <DependentUpon>RegTorneo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEquipos\Equipos.master.cs">
+      <DependentUpon>Equipos.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterEquipos\Equipos.master.designer.cs">
+      <DependentUpon>Equipos.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEquipos\ListadoEquipos.aspx.cs">
+      <DependentUpon>ListadoEquipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterEquipos\ListadoEquipos.aspx.designer.cs">
+      <DependentUpon>ListadoEquipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEquipos\RegContacto.aspx.cs">
+      <DependentUpon>RegContacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterEquipos\RegContacto.aspx.designer.cs">
+      <DependentUpon>RegContacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="font\bootstrap\font\glyphicons-halflings-regular.eot" />
+    <None Include="font\bootstrap\font\glyphicons-halflings-regular.ttf" />
+    <None Include="font\bootstrap\font\glyphicons-halflings-regular.woff" />
+    <Content Include="Home.Master" />
+    <Content Include="MasterAdministracion\Administracion.master" />
+    <Content Include="MasterEquipos\Equipos.master" />
+    <Content Include="MasterAdministracion\NestedMasterPage1.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Borrar\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62071</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
