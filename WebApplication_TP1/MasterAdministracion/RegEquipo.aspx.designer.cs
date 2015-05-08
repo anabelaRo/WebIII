@@ -31,6 +31,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
+        /// Control reqValTxtNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqValTxtNombre;
+        
+        /// <summary>
         /// Control lblTorneo.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,22 @@ namespace WebApplication_TP1.MasterAdministracion {
         protected global::System.Web.UI.WebControls.Label lblTorneo;
         
         /// <summary>
-        /// Control txtTorneo.
+        /// Control ddlTorneos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTorneo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTorneos;
+        
+        /// <summary>
+        /// Control reqValDdlTorneos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqValDdlTorneos;
         
         /// <summary>
         /// Control lblMonto.
@@ -65,6 +83,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMonto;
+        
+        /// <summary>
+        /// Control reqValtxtMonto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqValtxtMonto;
         
         /// <summary>
         /// Control btnCrear.

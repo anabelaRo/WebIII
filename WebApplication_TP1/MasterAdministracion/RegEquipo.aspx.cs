@@ -11,7 +11,14 @@ namespace WebApplication_TP1.MasterAdministracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+        }
 
+        protected void btnCrear_Click(object sender, EventArgs e)
+        {
+            //[AR] Para que haga las validaciones
+
+            Page.Validate();
         }
     }
 }

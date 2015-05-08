@@ -31,6 +31,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
+        /// Control valReqTxtNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valReqTxtNombre;
+        
+        /// <summary>
         /// Control lblApellido.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
+        
+        /// <summary>
+        /// Control valReqTxtApellido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valReqTxtApellido;
         
         /// <summary>
         /// Control lblEdad.
@@ -67,6 +85,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         protected global::System.Web.UI.WebControls.TextBox txtEdad;
         
         /// <summary>
+        /// Control valReqTxtEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valReqTxtEdad;
+        
+        /// <summary>
         /// Control lblEquipo.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlEquipos;
+        
+        /// <summary>
+        /// Control reqValDdlEquipos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqValDdlEquipos;
         
         /// <summary>
         /// Control btnCrear.
