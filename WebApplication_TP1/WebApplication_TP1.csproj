@@ -108,13 +108,6 @@
     <Compile Include="MasterAdministracion\Administracion.master.designer.cs">
       <DependentUpon>Administracion.master</DependentUpon>
     </Compile>
-    <Compile Include="MasterAdministracion\NestedMasterPage1.master.cs">
-      <DependentUpon>NestedMasterPage1.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MasterAdministracion\NestedMasterPage1.master.designer.cs">
-      <DependentUpon>NestedMasterPage1.master</DependentUpon>
-    </Compile>
     <Compile Include="MasterAdministracion\RegEquipo.aspx.cs">
       <DependentUpon>RegEquipo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,7 +159,6 @@
     <Content Include="Home.Master" />
     <Content Include="MasterAdministracion\Administracion.master" />
     <Content Include="MasterEquipos\Equipos.master" />
-    <Content Include="MasterAdministracion\NestedMasterPage1.master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Borrar\" />
