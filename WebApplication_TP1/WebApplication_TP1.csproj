@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContenidoHome.aspx" />
+    <Content Include="Controls\Footer.ascx" />
     <Content Include="css\bootstrap\css\bootstrap-theme.css" />
     <Content Include="css\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap\css\bootstrap.css" />
@@ -85,6 +86,13 @@
     </Compile>
     <Compile Include="ContenidoHome.aspx.designer.cs">
       <DependentUpon>ContenidoHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>

@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentEquiposCenterMed" runat="server">
     
-    <h3>Registrar Contacto:</h3>
+    <h3>Contacto:</h3>
         
     <div id="divContacto">
         

@@ -6,8 +6,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHomeCenterIzq" runat="server">
 
     <ul id="menuVertical">
-        <li> <a href="/MasterEquipos/ListadoEquipos.aspx">ListadoEquipos.aspx</a> </li>
-        <li> <a href="/MasterEquipos/RegContacto.aspx">RegContacto.aspx</a> </li>
+        <li> <a href="/MasterEquipos/ListadoEquipos.aspx">Listado de Equipos</a> </li>
+        <li> <a href="/MasterEquipos/RegContacto.aspx">Contacto</a> </li>
     </ul>
 
 </asp:Content>

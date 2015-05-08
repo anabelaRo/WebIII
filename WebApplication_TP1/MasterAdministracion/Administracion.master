@@ -6,9 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHomeCenterIzq" runat="server">
 
     <ul id="menuVertical">
-        <li> <a href="/MasterAdministracion/RegEquipo.aspx">RegEquipo.aspx</a> </li>
-        <li> <a href="/MasterAdministracion/RegJugador.aspx">RegJugador.aspx</a> </li>
-        <li> <a href="/MasterAdministracion/RegTorneo.aspx">RegTorneo.aspx</a> </li>
+        <li> <a href="/MasterAdministracion/RegEquipo.aspx">Crear Equipo</a> </li>
+        <li> <a href="/MasterAdministracion/RegJugador.aspx">Crear Jugador</a> </li>
+        <li> <a href="/MasterAdministracion/RegTorneo.aspx">Crear Torneo</a> </li>
     </ul>
 
 </asp:Content>

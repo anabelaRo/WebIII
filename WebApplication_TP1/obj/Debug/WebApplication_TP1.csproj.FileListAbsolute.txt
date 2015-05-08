@@ -2,3 +2,7 @@ c:\users\arx0063\documents\visual studio 2010\Projects\WebApplication_TP1\WebApp
 c:\users\arx0063\documents\visual studio 2010\Projects\WebApplication_TP1\WebApplication_TP1\bin\WebApplication_TP1.pdb
 c:\users\arx0063\documents\visual studio 2010\Projects\WebApplication_TP1\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
 c:\users\arx0063\documents\visual studio 2010\Projects\WebApplication_TP1\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb
+C:\Users\Asus\Documents\Visual Studio 2010\Projects\WebApplication_TP1\bin\WebApplication_TP1.dll
+C:\Users\Asus\Documents\Visual Studio 2010\Projects\WebApplication_TP1\bin\WebApplication_TP1.pdb
+C:\Users\Asus\Documents\Visual Studio 2010\Projects\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
+C:\Users\Asus\Documents\Visual Studio 2010\Projects\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb

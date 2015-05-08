@@ -91,14 +91,14 @@
 {
     float:left;
     width:20%;
-    min-height:500px;
+    min-height:400px;
 }
 
 #divHomeCuerpoMed
 {
     float:left;
     width:60%;
-    min-height:500px;
+    min-height:400px;
     background-color:White;
     box-shadow:0px 0px 10px #000 inset;
     padding: 20px 30px;
