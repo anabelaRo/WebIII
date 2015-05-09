@@ -10,3 +10,7 @@ C:\Users\anabela.nora.rossi\Facu2015\WebIII\WebIIIUNLaM\WebApplication_TP1\bin\W
 C:\Users\anabela.nora.rossi\Facu2015\WebIII\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication_TP1.pdb
 C:\Users\anabela.nora.rossi\Facu2015\WebIII\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
 C:\Users\anabela.nora.rossi\Facu2015\WebIII\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb
+C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication_TP1.dll
+C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication_TP1.pdb
+C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
+C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb

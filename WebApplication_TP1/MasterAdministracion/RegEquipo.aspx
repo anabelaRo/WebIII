@@ -20,14 +20,17 @@
             <asp:ListItem Text="Torneo 2" Value="Torneo 2"/>
         </asp:DropDownList>
 
-    <asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlTorneos" Display="Static" ControlToValidate="ddlTorneos" runat="server" ErrorMessage="Debe eligir un torneo" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig">
-    </asp:RequiredFieldValidator>
+  <%-- [AR] Es opcional el torneo
+   <asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlTorneos" Display="Static" ControlToValidate="ddlTorneos" runat="server" ErrorMessage="Debe eligir un torneo" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig">
+    </asp:RequiredFieldValidator>--%>
+
         <br/>
 
         <asp:Label ID="lblMonto" runat="server" Text="Monto abonado:"/>
         <asp:TextBox ID="txtMonto" runat="server"/>
         <asp:RequiredFieldValidator ID="reqValtxtMonto" runat="server" ErrorMessage="El monto es Obligatorio" ControlToValidate="txtMonto" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
-               
+        <asp:RegularExpressionValidator ID="ValNumTxtMonto" ControlToValidate="txtMonto" 
+        runat="server" ErrorMessage="El monto debe ser numérico" Display="Dynamic" ValidationExpression="(?!^0*$)(?!^0*\.0*$)^\d{1,18}(\.\d{1,2})?$" ValidationGroup="ValidacionOblig"></asp:RegularExpressionValidator>           
         <br/>
         <br/>
 

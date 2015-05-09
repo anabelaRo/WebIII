@@ -21,7 +21,9 @@
         <asp:Label ID="lblEdad" runat="server" Text="Edad:"/>
         <asp:TextBox ID="txtEdad" runat="server"/>
         <asp:RequiredFieldValidator ID="valReqTxtEdad" runat="server" ErrorMessage="La edad es obligatoria" ControlToValidate="txtEdad" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
-                
+        [<%--AR]Lo obligamos a que la edad sea tipo entero--%>
+        <asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" 
+        ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" ValidationGroup="ValidacionOblig" />         
         <br/>
 
         <asp:Label ID="lblEquipo" runat="server" Text="Equipo:"/>
