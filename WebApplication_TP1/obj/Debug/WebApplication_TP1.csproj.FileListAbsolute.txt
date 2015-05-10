@@ -14,3 +14,7 @@ C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication
 C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication_TP1.pdb
 C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
 C:\Users\Nora\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb
+C:\Users\arx0063\Documents\Visual Studio 2010\Projects\WebApplication_TP1\bin\WebApplication_TP1.dll
+C:\Users\arx0063\Documents\Visual Studio 2010\Projects\WebApplication_TP1\bin\WebApplication_TP1.pdb
+C:\Users\arx0063\Documents\Visual Studio 2010\Projects\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
+C:\Users\arx0063\Documents\Visual Studio 2010\Projects\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb

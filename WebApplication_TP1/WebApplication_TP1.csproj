@@ -61,7 +61,7 @@
     <Content Include="img\Balon_de_futbol.png" />
     <Content Include="js\bootstrap\js\bootstrap.js" />
     <Content Include="js\bootstrap\js\bootstrap.min.js" />
-    <Content Include="js\ie10-viewport-bug-workaround.js" />
+    <Content Include="js\Home.js" />
     <Content Include="js\jquery\jquery-2.1.4.js" />
     <Content Include="js\jquery\jquery-2.1.4.min.js" />
     <Content Include="js\jquery\jquery-ui.js" />

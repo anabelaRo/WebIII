@@ -16,7 +16,7 @@
 			<%-- [AR] El torneo tiene que se combo--%>
 			<asp:Label ID="lblTorneo" runat="server" Text="Torneo:"/>
 			<asp:DropDownList ID="ddlTorneos" runat="server" class="form-control">
-				<asp:ListItem Text="Seleccione Torneo" Value="0"/>
+				<asp:ListItem Text="Seleccione Torneo" Value=""/>
 				<asp:ListItem Text="Torneo 1" Value="Torneo 1"/>
 				<asp:ListItem Text="Torneo 2" Value="Torneo 2"/>
 			</asp:DropDownList>
@@ -37,7 +37,7 @@
 		<br/>
 		<br/>
 
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click"/>
+		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegEquipo();"/>
 
 	</div>
 

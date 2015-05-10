@@ -21,6 +21,12 @@
         <link href="~/css/EstilosGenericos.css" rel="stylesheet" type="text/css" />
         <%--css--%>
 
+        <%--JS de validacion--%>
+        <script type="text/javascript" 
+		    src="<%= Page.ResolveClientUrl("~/js/Home.js") %>">
+        </script>
+        <%--JS de validacion--%>
+
         <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
     </head>
