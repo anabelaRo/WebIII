@@ -36,8 +36,66 @@
 		<asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlEquipos" Display="Static" ControlToValidate="ddlEquipos" runat="server" ErrorMessage="Debe elegir un equipo" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig"></asp:RequiredFieldValidator>
 		<br/>
 		<br/>
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
+	
+        <asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="prueba();"/>
 
 	</div>
+
+
+    <script>
+
+        function prueba() {
+
+            var nombre = document.getElementById('<%= txtNombre.ClientID %>').value;
+            var apellido = document.getElementById('<%= txtApellido.ClientID %>').value;
+            var edad = document.getElementById('<%= txtEdad.ClientID %>').value;
+            var equipo = document.getElementById('<%= ddlEquipos.ClientID %>').selectedIndex;
+
+            
+
+            if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
+
+                alert("Debe ingresar un nombre")
+                return false;
+
+            } else if (apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
+
+                alert("Debe ingresar apellido")
+                return false;
+
+            } else if (edad == null || edad.length == 0 || /^\s+$/.test(edad)) {
+
+                alert("Debe ingresar edad")
+                return false;
+
+            } else if (!/^\d*$/.test(edad)) {
+
+                alert("Edad debe ser un número entero")
+                return false;
+
+            } else if (equipo == 0) {
+
+                alert("Debe seleccionar equipo")
+                return false;
+
+            } 
+
+            
+            
+            else {
+
+                alert("Se creará el jugador:" + nombre + " " + apellido);
+                return true;
+            }
+
+
+        }
+
+
+    
+    </script>
+
+
+
 
 </asp:Content>

@@ -6,7 +6,7 @@
 
 	<div id="divTorneo">
 		<asp:Label ID="lblNombre" runat="server" Text="Nombre:"/>
-		<asp:TextBox ID="txtNombre" runat="server" class="btn btn-default"/>
+		<asp:TextBox ID="txtNombre" runat="server"/>
 		<%--[AR] Nombre obligatorio--%>
 		<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 		<br/>
@@ -22,7 +22,38 @@
 		</div>
 		<br/>
 		<br/>
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click"/>
+		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="prueba();"/>
+      
 	</div>
 
+    <script>
+
+        function prueba() {
+
+            var txtName = '<%= txtNombre.ClientID %>'
+            alert("lala");
+            alert(txtName);
+
+            var textbox = document.getElementById('<%= txtNombre.ClientID %>').value;
+
+
+
+
+            if (textbox == null || textbox.length == 0 || /^\s+$/.test(textbox)) {
+
+                alert("Debe ingresar un nombre")
+                return false;
+
+            } else {
+
+                alert("Se creará el torneo:" + textbox);
+                return true;
+            }
+
+
+        }
+
+
+    
+    </script>
 </asp:Content>

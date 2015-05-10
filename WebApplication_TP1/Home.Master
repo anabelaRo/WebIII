@@ -21,11 +21,15 @@
         <link href="~/css/EstilosGenericos.css" rel="stylesheet" type="text/css" />
         <%--css--%>
 
+        <%--Validaciones JS--%>
+        <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/js/Validaciones.js") %>"></script>
+        <%--Validaciones JS--%>
+
         <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
     </head>
     <body>
-        <form id="formMaster" runat="server" role="form" class="form-inline">
+        <form id="formMaster" runat="server">
             <div id="divHomeMaster">
 
                 <div id="divCabecera">

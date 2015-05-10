@@ -66,6 +66,7 @@
     <Content Include="js\jquery\jquery-2.1.4.min.js" />
     <Content Include="js\jquery\jquery-ui.js" />
     <Content Include="js\jquery\jquery-ui.min.js" />
+    <Content Include="js\Validaciones.js" />
     <Content Include="MasterAdministracion\RegEquipo.aspx" />
     <Content Include="MasterAdministracion\RegJugador.aspx" />
     <Content Include="MasterAdministracion\RegTorneo.aspx" />
