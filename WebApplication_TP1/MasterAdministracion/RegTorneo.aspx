@@ -22,7 +22,10 @@
 		</div>
 		<br/>
 		<br/>
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click"/>
+		
+        <asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegTorneo();"/>
+
+        
 	</div>
 
 </asp:Content>

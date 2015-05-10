@@ -22,3 +22,7 @@ C:\Users\arx0063\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\bin\WebApplicat
 C:\Users\arx0063\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication_TP1.pdb
 C:\Users\arx0063\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
 C:\Users\arx0063\Documents\GitHub\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb
+C:\Users\Anabelatrix\Documents\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication_TP1.dll
+C:\Users\Anabelatrix\Documents\WebIIIUNLaM\WebApplication_TP1\bin\WebApplication_TP1.pdb
+C:\Users\Anabelatrix\Documents\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.dll
+C:\Users\Anabelatrix\Documents\WebIIIUNLaM\WebApplication_TP1\obj\Debug\WebApplication_TP1.pdb

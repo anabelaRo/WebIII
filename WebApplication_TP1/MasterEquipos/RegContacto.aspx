@@ -28,9 +28,8 @@
         <br/>
         <br/>
 
-        <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" 
-            onclick="btnRegistrar_Click"/>
-            
+         <asp:Button ID="btnRegistrar" runat="server" Text="Crear" onclick="btnRegistrar_Click" OnClientClick="valCamposRegContacto();"/>
+   
     </div>
 
 </asp:Content>
