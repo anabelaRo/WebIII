@@ -23,7 +23,7 @@
 
         <%--JS de validacion--%>
         <script type="text/javascript" 
-		    src="<%= Page.ResolveClientUrl("~/js/Home.js") %>">
+		    src="<%= Page.ResolveClientUrl("~/js/Home.js") %>"> 
         </script>
         <%--JS de validacion--%>
 
