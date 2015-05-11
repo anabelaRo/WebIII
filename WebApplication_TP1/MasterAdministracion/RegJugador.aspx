@@ -2,9 +2,15 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentAdministracionCenterMed" runat="server">
 
-	<h3>Crear Jugador:</h3>
-
 	<div id="divJugador">
+
+		<ol class="breadcrumb">
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Administración</a></li>
+			<li class="active">Crear Jugador</li>
+		</ol>
+		<h3>Crear Jugador:</h3>
+
 		<div class="form-group">
 			<asp:Label ID="lblNombre" runat="server" Text="Nombre:"/>
 			<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
@@ -27,7 +33,7 @@
 		<br/>
 		<div class="form-group">
 			<asp:Label ID="lblEquipo" runat="server" Text="Equipo:"/>
-			<asp:DropDownList ID="ddlEquipos" runat="server">
+			<asp:DropDownList ID="ddlEquipos" runat="server" class="form-control">
 				<asp:ListItem Text="Seleccione Equipo" Value="0"/>
 				<asp:ListItem Text="Equipo 1" Value="Equipo 1"/>
 				<asp:ListItem Text="Equipo 2" Value="Equipo 2"/>

@@ -57,7 +57,7 @@
     <Content Include="css\bootstrap\css\bootstrap.css" />
     <Content Include="css\bootstrap\css\bootstrap.min.css" />
     <Content Include="css\EstilosGenericos.css" />
-    <Content Include="font\bootstrap\font\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\Balon_de_futbol.png" />
     <Content Include="js\bootstrap\js\bootstrap.js" />
     <Content Include="js\bootstrap\js\bootstrap.min.js" />
@@ -153,9 +153,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="font\bootstrap\font\glyphicons-halflings-regular.eot" />
-    <None Include="font\bootstrap\font\glyphicons-halflings-regular.ttf" />
-    <None Include="font\bootstrap\font\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Home.Master" />
     <Content Include="MasterAdministracion\Administracion.master" />
     <Content Include="MasterEquipos\Equipos.master" />

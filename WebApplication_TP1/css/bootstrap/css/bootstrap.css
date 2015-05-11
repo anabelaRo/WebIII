@@ -263,8 +263,8 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../../../fonts/bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../../fonts/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../../fonts/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../../fonts/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../../fonts/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -878,6 +878,10 @@ th {
 .glyphicon-tree-deciduous:before {
   content: "\e200";
 }
+.glyphicon-soccer-ball:before {
+  content: "\e330";
+}
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;

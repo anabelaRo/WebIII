@@ -2,9 +2,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentAdministracionCenterMed" runat="server">
 
-	<h3>Crear Equipo:</h3>
-
 	<div id="divEquipo">
+		<ol class="breadcrumb">
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Administración</a></li>
+			<li class="active">Crear Equipo</li>
+		</ol>
+		<h3>Crear Equipo:</h3>
 		<div class="form-group">
 			<asp:Label ID="lblNombre" runat="server" Text="Nombre:"/>
 			<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
@@ -37,7 +41,7 @@
 		<br/>
 		<br/>
 
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegEquipo();"/>
+		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegEquipo();"  class="btn btn-default"/>
 
 	</div>
 
