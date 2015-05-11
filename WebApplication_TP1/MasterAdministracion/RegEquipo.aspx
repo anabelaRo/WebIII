@@ -7,7 +7,7 @@
 	<div id="divEquipo">
 		<div class="form-group">
 			<asp:Label ID="lblNombre" runat="server" Text="Nombre:"/>
-			<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
+			<asp:TextBox ID="txtNombre" runat="server" class="form-control"/> <%--OnFocus="blanquearTextoError();"--%>
 		</div>
 			<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 <%--		</div>--%>
@@ -37,7 +37,8 @@
 		<br/>
 		<br/>
 
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegEquipo();"/>
+		<%--<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="return valCamposRegEquipo();"/>--%>
+        <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return valCamposRegEquipo();"/>
 
 	</div>
 

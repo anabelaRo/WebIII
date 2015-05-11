@@ -1,11 +1,16 @@
-ï»¿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="WebApplication_TP1.Home" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="WebApplication_TP1.Home" %>
 <%@ Register src="~/Controls/Footer.ascx" tagname="Footer" tagprefix="abc" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
-        <title>Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> <%--Problema con caracteres raros--%>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> <%--Problema con caracteres raros--%>
+        <title>TP 1 - Programación Web III</title>
+        <meta name="title" content="TP 1 - Programación Web III" />
+		<meta name="description" content="TP 1 - Programación Web III - Desarrollo Web" />
+        <meta name="keywords" content="TP 1 - Programación Web III - Desarrollo Web - Departamento de Ingeniaría" />
 
         <%--jQuery--%>
         <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/js/jquery/jquery-2.1.4.js") %>"></script>
@@ -42,7 +47,7 @@
                             <ul>
                                 <li> <a href="/ContenidoHome.aspx">Home</a> </li>
                                 <li><a href="/MasterEquipos/ListadoEquipos.aspx">Resumen de Equipos</a></li>
-                                <li><a href="/MasterAdministracion/RegTorneo.aspx">AdministraciÃ³n</a></li>
+                                <li><a href="/MasterAdministracion/RegTorneo.aspx">Administración</a></li>
                             </ul>
                             
                             <%--<div id="divContenidoMenu" class="container">
@@ -56,7 +61,7 @@
                                                     </a>
                                                 </li>
                                                 <li><a href="/MasterEquipos/ListadoEquipos.aspx">Resumen de Equipos</a></li>
-                                                <li><a href="/MasterAdministracion/RegTorneo.aspx">AdministraciÃ³n</a></li>
+                                                <li><a href="/MasterAdministracion/RegTorneo.aspx">Administración</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -66,11 +71,11 @@
                     
 
                         <div id="divLogo">
-                            <img src="/img/Balon_de_futbol.png" alt="Logo BalÃ³n"/>
+                            <img src="/img/Balon_de_futbol.png" alt="Logo Balón"/>
                         </div>
 
                         <div id="divTitulo">
-                            <h1>Club de FÃºtbol</h1>
+                            <h1>Club de Fútbol</h1>
                         </div>
 
                     </div>
