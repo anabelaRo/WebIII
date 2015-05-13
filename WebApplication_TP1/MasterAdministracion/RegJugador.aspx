@@ -21,7 +21,7 @@
 			<asp:Label ID="lblApellido" runat="server" Text="Apellido:"/>
 			<asp:TextBox ID="txtApellido" runat="server" class="form-control"/>
 		</div>
-		<asp:RequiredFieldValidator ID="valReqTxtApellido" runat="server" ErrorMessage="El apellido es Obligatorio" ControlToValidate="txtApellido" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
+		<asp:RequiredFieldValidator ID="valReqTxtApellido" runat="server" ErrorMessage="El apellido es Obligatorio" ControlToValidate="txtApellido" Display="Static"  Enabled="true" ValidationGroup="ValidacionOblig" EnableClientScript="True" ></asp:RequiredFieldValidator>
 		<br/>
 		<div class="form-group">
 			<asp:Label ID="lblEdad" runat="server" Text="Edad:"/>
@@ -29,7 +29,7 @@
 		</div>
 		<asp:RequiredFieldValidator ID="valReqTxtEdad" runat="server" ErrorMessage="La edad es obligatoria" ControlToValidate="txtEdad" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 		<%--[AR]Lo obligamos a que la edad sea tipo entero--%>
-		<asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" ValidationGroup="ValidacionOblig" />
+		<asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" ValidationGroup="ValidacionOblig" EnableClientScript="True" />
 		<br/>
 		<div class="form-group">
 			<asp:Label ID="lblEquipo" runat="server" Text="Equipo:"/>
@@ -39,11 +39,11 @@
 				<asp:ListItem Text="Equipo 2" Value="Equipo 2"/>
 			</asp:DropDownList>
 		</div>
-		<asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlEquipos" Display="Static" ControlToValidate="ddlEquipos" runat="server" ErrorMessage="Debe elegir un equipo" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig"></asp:RequiredFieldValidator>
+		<asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlEquipos" Display="Static" ControlToValidate="ddlEquipos" runat="server" ErrorMessage="Debe elegir un equipo" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 		<br/>
 		<br/>
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegJugador();" class="btn btn-default"/>
-
+		<%--<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegJugador();" class="btn btn-default"/>--%>
+        <asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
 	</div>
 
 </asp:Content>

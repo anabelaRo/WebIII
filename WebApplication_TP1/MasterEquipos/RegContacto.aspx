@@ -26,7 +26,7 @@
 		</div>
 		<%-- [AR] Mail obligatorio Y con formato de mail--%>       
 		<asp:RequiredFieldValidator ID="valReqTtxtMail" runat="server" ErrorMessage="El mail es Obligatorio" ControlToValidate="txtMail" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
-		<asp:RegularExpressionValidator id="valRegExpTtxtMail" runat ="server" ErrorMessage="Ingrese un email correcto" ControlToValidate="txtMail" ValidationExpression="\S+@\S+\.\S+\w+" ></asp:RegularExpressionValidator>
+		<asp:RegularExpressionValidator id="valRegExpTtxtMail" runat ="server" ErrorMessage="Ingrese un email correcto" ControlToValidate="txtMail" ValidationExpression="\S+@\S+\.\S+\w+" EnableClientScript="true"></asp:RegularExpressionValidator>
 
 		<br/>
 
@@ -37,7 +37,8 @@
 		<%-- [AR] comentario obligatorio --%>   
 		<asp:RequiredFieldValidator ID="valReqAreaComentario" runat="server" ErrorMessage="El comentario es Obligatorio" ControlToValidate="txtAreaComentario" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>  
 		<br /><br />
-		<asp:Button ID="btnRegistrar" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" OnClientClick="valCamposRegContacto();" class="btn btn-default"/>
+		<%--<asp:Button ID="btnRegistrar" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" OnClientClick="valCamposRegContacto();" class="btn btn-default"/>--%>
+        <asp:Button ID="Button1" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" class="btn btn-default"/>
 	</div>
 
 	</div>

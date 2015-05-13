@@ -36,13 +36,13 @@
 			<asp:TextBox ID="txtMonto" runat="server" class="form-control"/>
 			<asp:RequiredFieldValidator ID="reqValtxtMonto" runat="server" ErrorMessage="El monto es Obligatorio" ControlToValidate="txtMonto" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 			<asp:RegularExpressionValidator ID="ValNumTxtMonto" ControlToValidate="txtMonto" 
-			runat="server" ErrorMessage="El monto debe ser numérico" Display="Dynamic" ValidationExpression="(?!^0*$)(?!^0*\.0*$)^\d{1,18}(\.\d{1,2})?$" ValidationGroup="ValidacionOblig"></asp:RegularExpressionValidator>
+			runat="server" ErrorMessage="El monto debe ser numérico" Display="Dynamic" ValidationExpression="(?!^0*$)(?!^0*\.0*$)^\d{1,18}(\.\d{1,2})?$" ValidationGroup="ValidacionOblig" EnableClientScript="True"></asp:RegularExpressionValidator>
 		</div>
 		<br/>
 		<br/>
 
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return valCamposRegEquipo();" class="btn btn-default"/>
-
+		<%--<asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return valCamposRegEquipo();" class="btn btn-default"/>--%>
+        <asp:Button ID="Button1" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
 	</div>
 
 </asp:Content>

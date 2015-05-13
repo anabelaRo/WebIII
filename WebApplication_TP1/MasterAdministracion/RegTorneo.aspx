@@ -13,7 +13,7 @@
 		<asp:Label ID="lblNombre" runat="server" Text="Nombre:"/>
 		<asp:TextBox ID="txtNombre" runat="server" class="btn btn-default"/>
 		<%--[AR] Nombre obligatorio--%>
-		<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
+		<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" EnableClientScript="True" ControlToValidate="txtNombre" Display="Static" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 		<br/>
 		<div class="checkbox">
 			<asp:Label ID="Label1" runat="server" Text="Activo:"/>
@@ -27,7 +27,8 @@
 		</div>
 		<br/>
 		<br/>
-		<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegTorneo(); class="btn btn-default"/>
+		<%--<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegTorneo();" class="btn btn-default"/>--%>
+        <asp:Button ID="Button1" runat="server" Text="Crear" onclick="btnCrear_Click"  class="btn btn-default"/>
 	</div>
 
 </asp:Content>
