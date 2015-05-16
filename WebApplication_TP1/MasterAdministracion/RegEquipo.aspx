@@ -11,10 +11,9 @@
 		<h3>Crear Equipo:</h3>
 		<div class="form-group">
 			<asp:Label ID="lblNombre" runat="server" Text="Nombre:"/>
-			<asp:TextBox ID="txtNombre" runat="server" class="form-control"/> <%--OnFocus="blanquearTextoError();"--%>
+			<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
 		</div>
 			<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
-<%--		</div>--%>
 		<br/>
 		<div class="form-group">
 			<%-- [AR] El torneo tiene que se combo--%>
@@ -26,10 +25,6 @@
 			</asp:DropDownList>
 		</div>
 
-		<%-- [AR] Es opcional el torneo
-		<asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlTorneos" Display="Static" ControlToValidate="ddlTorneos" runat="server" ErrorMessage="Debe eligir un torneo" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig">
-		</asp:RequiredFieldValidator>--%>
-
 		<br/>
 		<div class="form-group">
 			<asp:Label ID="lblMonto" runat="server" Text="Monto abonado:"/>
@@ -40,8 +35,6 @@
 		</div>
 		<br/>
 		<br/>
-
-		<%--<asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return valCamposRegEquipo();" class="btn btn-default"/>--%>
         <asp:Button ID="Button1" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
 	</div>
 

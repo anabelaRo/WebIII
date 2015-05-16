@@ -9,6 +9,7 @@
 			<li><a href="#">Resumen de Equipos</a></li>
 			<li class="active">Contacto</li>
 		</ol>
+
 		<h3>Contacto:</h3>
 
 		<div class="form-group">
@@ -37,11 +38,6 @@
 		<%-- [AR] comentario obligatorio --%>   
 		<asp:RequiredFieldValidator ID="valReqAreaComentario" runat="server" ErrorMessage="El comentario es Obligatorio" ControlToValidate="txtAreaComentario" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>  
 		<br /><br />
-		<%--<asp:Button ID="btnRegistrar" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" OnClientClick="valCamposRegContacto();" class="btn btn-default"/>--%>
         <asp:Button ID="Button1" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" class="btn btn-default"/>
 	</div>
-
-	</div>
-
-
 </asp:Content>

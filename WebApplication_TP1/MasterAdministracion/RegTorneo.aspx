@@ -18,16 +18,9 @@
 		<div class="checkbox">
 			<asp:Label ID="Label1" runat="server" Text="Activo:"/>
 			<asp:CheckBox ID="chkEstado" runat="server"/>
-       <%-- [AR] VERIFICAR SI NO VA MEJOR CON DDL
-        <asp:Label ID="lblEstado" runat="server" Text="Estado:"/>
-        <asp:DropDownList ID="ddlEstado" runat="server" >
-            <asp:ListItem Text="Activo" Value="1"/>
-            <asp:ListItem Text="Inactivo" Value="0"/>
-        </asp:DropDownList>--%>
 		</div>
 		<br/>
 		<br/>
-		<%--<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" OnClientClick="valCamposRegTorneo();" class="btn btn-default"/>--%>
         <asp:Button ID="Button1" runat="server" Text="Crear" onclick="btnCrear_Click"  class="btn btn-default"/>
 	</div>
 
