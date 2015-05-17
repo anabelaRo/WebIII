@@ -49,7 +49,7 @@
 			<br />
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
-					<asp:Button ID="Button1" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
+					<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
 				</div>
 			</div>
 		</div>

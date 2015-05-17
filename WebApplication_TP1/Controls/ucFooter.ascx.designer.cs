@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebApplication_TP1 {
+namespace WebApplication_TP1.Controls {
     
     
-    public partial class Footer {
+    public partial class ucFooter {
     }
 }

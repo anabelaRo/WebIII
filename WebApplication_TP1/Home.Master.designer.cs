@@ -13,6 +13,15 @@ namespace WebApplication_TP1 {
     public partial class Home {
         
         /// <summary>
+        /// Control Head1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        
+        /// <summary>
         /// Control head.
         /// </summary>
         /// <remarks>
@@ -49,12 +58,12 @@ namespace WebApplication_TP1 {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentHomeCenterMed;
         
         /// <summary>
-        /// Control abcFooter.
+        /// Control ucFfooter.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::WebApplication_TP1.Footer abcFooter;
+        protected global::WebApplication_TP1.Controls.ucFooter ucFfooter;
     }
 }

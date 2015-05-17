@@ -4,11 +4,12 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHomeCenterIzq" runat="server">
-
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHomeCenterMed" runat="server">
 
-    <h3>Bienvenidos</h3>
+    <div id="idContenidoHome">
+        <h1>Bienvenidos</h1>
+    </div>
 
 </asp:Content>

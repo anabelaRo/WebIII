@@ -1,10 +1,14 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="WebApplication_TP1.Home" %>
-<%@ Register src="~/Controls/Footer.ascx" tagname="Footer" tagprefix="abc" %>
+<%@ Register src="~/Controls/ucFooter.ascx" tagname="ucFooter" tagprefix="ucF" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
+    <head id="Head1" runat="server">
+        <meta charset="UTF-8">
+        <meta name="description" content="Sitio de administracion de torneos y equipos de futbol">
+        <meta name="keywords" content="futbol,torneos,equiopos,jugadores">
+        <meta name="author" content="Anabela Rossi,Juan Sobrile,Emiliano Zambrano">
         <title>Home</title>
 
         <%--jQuery--%>
@@ -13,12 +17,12 @@
         <%--jQuery--%>
 
         <%--BootStrap--%>
-        <link href="~/css/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/js/bootstrap/js/bootstrap.js") %>"></script>
+        <link href="~/css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/js/bootstrap/bootstrap.js") %>"></script>
         <%--BootStrap--%>
 
         <%--css--%>
-        <link href="~/css/EstilosGenericos.css" rel="stylesheet" type="text/css" />
+        <link href="~/css/Home.css" rel="stylesheet" type="text/css" />
         <%--css--%>
 
         <%--JS--%>
@@ -44,12 +48,17 @@
                         </div>
 
                         <div id="divLogo">
-                            <img src="/img/Balon_de_futbol.png" alt="Logo Balón"/>
+                            <img src="/img/logo.png" alt="Logo Torneos"/>
                         </div>
 
                         <div id="divTitulo">
-                            <h1>Club de Fútbol</h1>
+                            <h1>Torneos de Fútbol</h1>
                         </div>
+						
+						<div id="divLogo2">
+                            <img src="/img/logo.png" alt="Logo Torneos"/>
+                        </div>
+
                     </div>
                 </div>    
             
@@ -66,6 +75,7 @@
                     </div>
 
                     <div id="divFooter">
+						<ucF:ucFooter ID="ucFfooter" runat="server" />
                     </div>
                 </div>
             </div>

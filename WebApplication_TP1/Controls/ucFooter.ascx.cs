@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication_TP1
+namespace WebApplication_TP1.Controls
 {
-    public partial class Footer : System.Web.UI.UserControl
+    public partial class ucFooter : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

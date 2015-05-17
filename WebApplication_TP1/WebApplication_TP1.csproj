@@ -51,13 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContenidoHome.aspx" />
-    <Content Include="Controls\Footer.ascx" />
-    <Content Include="css\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap\css\bootstrap.css" />
-    <Content Include="css\EstilosGenericos.css" />
-    <Content Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="img\Balon_de_futbol.png" />
-    <Content Include="js\bootstrap\js\bootstrap.js" />
+    <Content Include="Controls\ucFooter.ascx" />
+    <Content Include="Controls\ucListadoEquipos.ascx" />
+    <Content Include="css\bootstrap\bootstrap-theme.css" />
+    <Content Include="css\bootstrap\bootstrap.css" />
+    <Content Include="css\Home.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\logo.png" />
+    <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\Home.js" />
     <Content Include="js\jquery\jquery-2.1.4.js" />
     <Content Include="js\jquery\jquery-ui.js" />
@@ -82,12 +83,19 @@
     <Compile Include="ContenidoHome.aspx.designer.cs">
       <DependentUpon>ContenidoHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Footer.ascx.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
+    <Compile Include="Controls\ucFooter.ascx.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Footer.ascx.designer.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
+    <Compile Include="Controls\ucFooter.ascx.designer.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucListadoEquipos.ascx.cs">
+      <DependentUpon>ucListadoEquipos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ucListadoEquipos.ascx.designer.cs">
+      <DependentUpon>ucListadoEquipos.ascx</DependentUpon>
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
@@ -148,9 +156,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="fonts\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Home.Master" />
     <Content Include="MasterAdministracion\Administracion.master" />
     <Content Include="MasterEquipos\Equipos.master" />
