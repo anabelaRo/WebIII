@@ -12,12 +12,15 @@
 
 		<asp:Label ID="lblNombre" runat="server" Text="Nombre:"/>
 		<asp:TextBox ID="txtNombre" runat="server" class="btn btn-default"/>
-		<%--[AR] Nombre obligatorio--%>
+		
 		<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" EnableClientScript="True" ControlToValidate="txtNombre" Display="Static" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 		<br/>
-		<div class="checkbox">
-			<asp:Label ID="Label1" runat="server" Text="Activo:"/>
-			<asp:CheckBox ID="chkEstado" runat="server"/>
+	         <asp:Label ID="Label1" runat="server" Text="Estado:"/>
+             <asp:RadioButtonList ID="radBtnLstEstado" runat="server">
+                 <asp:ListItem Selected="True">Activo</asp:ListItem>
+                 <asp:ListItem>Inactivo</asp:ListItem>
+             </asp:RadioButtonList>
+
 		</div>
 		<br/>
 		<br/>

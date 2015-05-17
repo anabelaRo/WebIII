@@ -16,7 +16,6 @@
 			<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
 		<br/>
 		<div class="form-group">
-			<%-- [AR] El torneo tiene que se combo--%>
 			<asp:Label ID="lblTorneo" runat="server" Text="Torneo:"/>
 			<asp:DropDownList ID="ddlTorneos" runat="server" class="form-control">
 				<asp:ListItem Text="Seleccione Torneo" Value=""/>
