@@ -11,30 +11,47 @@
 		</ol>
 
 		<h3>Contacto:</h3>
-
-		<div class="form-group">
-			<asp:Label ID="lblNombre" runat="server" Text="Nombre completo:" for="txtNombre"/>
-			<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
-		</div>    
-		<asp:RequiredFieldValidator ID="valReqTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
-
-		<br />
-
-		<div class="form-group">
-			<asp:Label ID="lblMail" runat="server" Text="E-mail:" for="txtMail"/>
-			<asp:TextBox ID="txtMail" runat="server" class="form-control"/>
-		</div>   
-		<asp:RequiredFieldValidator ID="valReqTtxtMail" runat="server" ErrorMessage="El mail es Obligatorio" ControlToValidate="txtMail" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>
-		<asp:RegularExpressionValidator id="valRegExpTtxtMail" runat ="server" ErrorMessage="Ingrese un email correcto" ControlToValidate="txtMail" ValidationExpression="\S+@\S+\.\S+\w+" EnableClientScript="true"></asp:RegularExpressionValidator>
-
-		<br/>
-
-		<div class="form-group">
-			<asp:Label ID="lblComentario" runat="server" Text="Comentario:" for="txtAreaComentario"/>
-			<asp:TextBox id="txtAreaComentario" TextMode="multiline" Columns="20" Rows="3" runat="server"/>
-		</div> 
-		<asp:RequiredFieldValidator ID="valReqAreaComentario" runat="server" ErrorMessage="El comentario es Obligatorio" ControlToValidate="txtAreaComentario" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" ></asp:RequiredFieldValidator>  
-		<br /><br />
-        <asp:Button ID="Button1" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" class="btn btn-default"/>
+		<div class="container-fluid fill">
+			<div class="row">
+				<div class="col-md-3">
+					<asp:Label ID="lblNombre" runat="server" Text="Nombre completo:" for="txtNombre"/>
+				</div>
+				<div class="col-md-4">
+					<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
+				</div>
+				<div class="col-md-5">
+					<asp:RequiredFieldValidator ID="valReqTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<asp:Label ID="lblMail" runat="server" Text="E-mail:" for="txtMail"/>
+				</div>
+				<div class="col-md-4">
+					<asp:TextBox ID="txtMail" runat="server" class="form-control"/>
+				</div>
+				<div class="col-md-5">
+					<asp:RequiredFieldValidator ID="valReqTtxtMail" runat="server" ErrorMessage="El mail es Obligatorio" ControlToValidate="txtMail" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RegularExpressionValidator id="valRegExpTtxtMail" runat ="server" ErrorMessage="Ingrese un email correcto" ControlToValidate="txtMail" ValidationExpression="\S+@\S+\.\S+\w+" EnableClientScript="true" CssClass="label label-danger"></asp:RegularExpressionValidator>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<asp:Label ID="lblComentario" runat="server" Text="Comentario:" for="txtAreaComentario"/>
+				</div>
+				<div class="col-md-4">
+					<asp:TextBox id="txtAreaComentario" TextMode="multiline" Columns="20" Rows="3" runat="server"/>
+				</div>
+				<div class="col-md-5">
+					<asp:RequiredFieldValidator ID="valReqAreaComentario" runat="server" ErrorMessage="El comentario es Obligatorio" ControlToValidate="txtAreaComentario" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<asp:Button ID="Button1" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" class="btn btn-default"/>
+				</div>
+			</div>
+		</div>
 	</div>
 </asp:Content>

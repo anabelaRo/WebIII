@@ -41,4 +41,5 @@
 			<div class="col-sm-4">Torneo 3</div>
 			<div class="col-sm-3">Activo</div>
 		</div>
+	</div>
 </asp:Content>
