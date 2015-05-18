@@ -5,8 +5,8 @@
 	<div id="divJugador">
 
 		<ol class="breadcrumb">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Administración</a></li>
+			<li>Inicio</li>
+			<li>Administración</li>
 			<li class="active">Crear Jugador</li>
 		</ol>
 		<h3>Crear Jugador:</h3>

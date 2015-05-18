@@ -4,8 +4,8 @@
 
 	<div id="divEquipo">
 		<ol class="breadcrumb">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Administración</a></li>
+			<li>Inicio</li>
+			<li>Administración</li>
 			<li class="active">Crear Equipo</li>
 		</ol>
 		<h3>Crear Equipo:</h3>

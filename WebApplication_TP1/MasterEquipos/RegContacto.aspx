@@ -4,11 +4,13 @@
 
 	<div id="divContacto">
 
-		<ol class="breadcrumb">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Resumen de Equipos</a></li>
+
+	    <ol class="breadcrumb">
+			<li>Inicio</li>
+			<li>Resumen de Equipos</li>
 			<li class="active">Contacto</li>
 		</ol>
+
 
 		<h3>Contacto:</h3>
 		<div class="container-fluid fill">

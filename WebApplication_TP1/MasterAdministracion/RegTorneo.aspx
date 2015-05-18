@@ -4,8 +4,8 @@
 
 	<div id="divTorneo">
 		<ol class="breadcrumb">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Administración</a></li>
+			<li>Inicio</li>
+			<li>Administración</li>
 			<li class="active">Crear Torneo</li>
 		</ol>
 		<h3>Crear Torneo:</h3>
