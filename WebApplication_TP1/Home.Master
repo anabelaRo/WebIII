@@ -46,34 +46,26 @@
                                 <li><a href="/MasterAdministracion/RegTorneo.aspx">Administración</a></li>
                             </ul>
                         </div>
-
                         <div id="divLogo">
                             <img src="/img/logo.png" alt="Logo Torneos"/>
                         </div>
-
                         <div id="divTitulo">
                             <h1>Torneos de Fútbol</h1>
                         </div>
-						
-						<div id="divLogo2">
+						<%--<div id="divLogo2">
                             <img src="/img/logo.png" alt="Logo Torneos"/>
-                        </div>
-
+                        </div>--%>
                     </div>
                 </div>    
-            
                 <div id="divCuerpo">
                     <div id="divHomeCuerpoIzq">
                         <asp:ContentPlaceHolder ID="ContentHomeCenterIzq" runat="server"></asp:ContentPlaceHolder>
                     </div>
-
                     <div id="divHomeCuerpoMed">
                         <asp:ContentPlaceHolder ID="ContentHomeCenterMed" runat="server"></asp:ContentPlaceHolder>
                     </div>
-
                     <div id="divHomeCuerpoDer">
                     </div>
-
                     <div id="divFooter">
 						<ucF:ucFooter ID="ucFfooter" runat="server" />
                     </div>

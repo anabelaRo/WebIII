@@ -1,17 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterEquipos/Equipos.master" AutoEventWireup="true" CodeBehind="RegContacto.aspx.cs" Inherits="WebApplication_TP1.MasterEquipos.RegContacto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentEquiposCenterMed" runat="server">
-
 	<div id="divContacto">
-
-
 	    <ol class="breadcrumb">
 			<li>Inicio</li>
 			<li>Resumen de Equipos</li>
 			<li class="active">Contacto</li>
 		</ol>
-
-
 		<h3>Contacto:</h3>
 		<div class="container-fluid fill">
 			<div class="row">
