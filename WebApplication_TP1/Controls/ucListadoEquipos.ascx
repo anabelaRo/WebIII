@@ -2,8 +2,8 @@
 
 <div id="divListEquipos">
 	<ol class="breadcrumb">
-		<li><a href="#">Inicio</a></li>
-		<li><a href="#">Resumen de Equipos</a></li>
+		<li>Inicio</li>
+		<li>Resumen de Equipos</li>
 		<li class="active">Listado de Equipos</li>
 	</ol>
 	<h3>Listado de Equipos:</h3>
