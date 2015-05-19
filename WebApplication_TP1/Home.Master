@@ -7,7 +7,7 @@
     <head id="Head1" runat="server">
         <meta charset="UTF-8">
         <meta name="description" content="Sitio de administracion de torneos y equipos de futbol">
-        <meta name="keywords" content="futbol,torneos,equiopos,jugadores">
+        <meta name="keywords" content="futbol,torneos,equipos,jugadores">
         <meta name="author" content="Anabela Rossi,Juan Sobrile,Emiliano Zambrano">
         <title>Home</title>
 
