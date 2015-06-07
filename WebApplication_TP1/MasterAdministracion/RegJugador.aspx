@@ -52,9 +52,9 @@
 				</div>
 				<div class="col-md-4">
 					<asp:DropDownList ID="ddlEquipos" runat="server" class="form-control">
-						<asp:ListItem Text="Seleccione Equipo" Value="0"/>
+						<%--<asp:ListItem Text="Seleccione Equipo" Value="0"/>
 						<asp:ListItem Text="Equipo 1" Value="Equipo 1"/>
-						<asp:ListItem Text="Equipo 2" Value="Equipo 2"/>
+						<asp:ListItem Text="Equipo 2" Value="Equipo 2"/>--%>
 					</asp:DropDownList>
 				</div>
 				<div class="col-md-4">

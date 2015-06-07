@@ -27,9 +27,9 @@
 				</div>
 				<div class="col-md-4">
 					<asp:DropDownList ID="ddlTorneos" runat="server" class="form-control">
-						<asp:ListItem Text="Seleccione Torneo" Value=""/>
+<%--						<asp:ListItem Text="Seleccione Torneo" Value=""/>
 						<asp:ListItem Text="Torneo 1" Value="Torneo 1"/>
-						<asp:ListItem Text="Torneo 2" Value="Torneo 2"/>
+						<asp:ListItem Text="Torneo 2" Value="Torneo 2"/>--%>
 					</asp:DropDownList>
 				</div>
 			</div>

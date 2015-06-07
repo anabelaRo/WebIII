@@ -13,6 +13,7 @@
     <RootNamespace>WebApplication_TP1</RootNamespace>
     <AssemblyName>WebApplication_TP1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -50,6 +54,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterEquipos\contacto-resultado.aspx" />
     <Content Include="ContenidoHome.aspx" />
     <Content Include="Controls\ucFooter.ascx" />
     <Content Include="Controls\ucListadoEquipos.ascx" />
@@ -76,6 +81,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MasterEquipos\contacto-resultado.aspx.cs">
+      <DependentUpon>contacto-resultado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterEquipos\contacto-resultado.aspx.designer.cs">
+      <DependentUpon>contacto-resultado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ContenidoHome.aspx.cs">
       <DependentUpon>ContenidoHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,6 +165,11 @@
     <Compile Include="MasterEquipos\RegContacto.aspx.designer.cs">
       <DependentUpon>RegContacto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +179,10 @@
     <Content Include="Home.Master" />
     <Content Include="MasterAdministracion\Administracion.master" />
     <Content Include="MasterEquipos\Equipos.master" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

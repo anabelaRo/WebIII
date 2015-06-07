@@ -48,7 +48,10 @@
 				<div class="col-md-4 col-md-offset-4">
 					<asp:Button ID="btnCrear" runat="server" Text="Enviar mensaje" onclick="btnRegistrar_Click" class="btn btn-default"/>
 				</div>
+                <asp:Label ID="grabo" runat="server" Text="lala"></asp:Label>
 			</div>
+
+
 		</div>
 	</div>
 </asp:Content>
