@@ -20,18 +20,9 @@ namespace WebApplication_TP1.MasterEquipos
         {
             //[AR] Para que haga las validaciones
 
-            // Page.Validate();
+            //Page.Validate();
 
-            //string connectionString = "Data Source=pcnora;initial catalog=PW3_20152C_TP2_Torneos;integrated security=True;";
-
-            //InsertData(connectionString,
-            //           txtNombre.Text.Trim(),
-            //           txtMail.Text.Trim(),
-            //           txtAreaComentario.Text.Trim()
-            //           );
-
-
-            try
+           try
             {
 
                 //create  object  of Connection Class..................
@@ -43,11 +34,22 @@ namespace WebApplication_TP1.MasterEquipos
                 // Open Connection..................
                 con.Open();
 
+
+
+               // SqlCommand command = new SqlCommand("select max(id) +1 from contacto");
+
+                
+                //command.Connection = con;
+               
+
+
                 //Create object of Command Class................
                 SqlCommand cmd = new SqlCommand();
 
                 //set Connection Property  of  Command object.............
                 cmd.Connection = con;
+
+               // Int32 value = (Int32)cmd.ExecuteScalar();
                 //Set Command type of command object
                 //1.StoredProcedure
                 //2.TableDirect
@@ -57,14 +59,16 @@ namespace WebApplication_TP1.MasterEquipos
 
                 //Set Command text Property of command object.........
 
-                cmd.CommandText = "Insert into contacto values (5, @nombre,@email,@comentario)";
+                cmd.CommandText = "Insert into contacto values (7, @nombre,@email,@comentario)";
 
                 // Se tiene que modificar para pasarle +1 en el ID
 
                 //Assign values as `parameter`. It avoids `SQL Injection`
+              //  cmd.Parameters.AddWithValue("@value", value);
                 cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
                 cmd.Parameters.AddWithValue("@email", txtMail.Text);
                 cmd.Parameters.AddWithValue("@comentario", txtAreaComentario.Text);
+
 
 
 
@@ -82,7 +86,6 @@ namespace WebApplication_TP1.MasterEquipos
                 con.Close();
 
 
-                grabo.Text = "Data Saved";
                 Response.Redirect("~/MasterEquipos/contacto-resultado.aspx");
             }
 
@@ -90,7 +93,7 @@ namespace WebApplication_TP1.MasterEquipos
             catch (Exception ex)
             {
                 grabo.Text =  ex.Message;
-                throw;
+                //throw;
             }
 
 
