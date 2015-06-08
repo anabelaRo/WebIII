@@ -24,55 +24,40 @@ namespace WebApplication_TP1.MasterEquipos
 
            try
             {
-
+                int value = 0;
                 //create  object  of Connection Class..................
                 SqlConnection con = new SqlConnection();
 
                 // Set Connection String property of Connection object..................
-                con.ConnectionString = "Data Source=pcnora;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
-
+                //con.ConnectionString = "Data Source=pcnora;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
+                con.ConnectionString = "Data Source=MW78BCNSUGPW3E;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
                 // Open Connection..................
                 con.Open();
-
-
-
-               // SqlCommand command = new SqlCommand("select max(id) +1 from contacto");
-
-                
-                //command.Connection = con;
                
-
-
                 //Create object of Command Class................
-                SqlCommand cmd = new SqlCommand();
+                SqlCommand cmd2 = new SqlCommand(); // PRUEBA PARA RECUPERAR EL ID
 
+                SqlCommand cmd = new SqlCommand();
                 //set Connection Property  of  Command object.............
                 cmd.Connection = con;
+                cmd2.Connection = con;// PRUEBA PARA RECUPERAR EL ID
 
-               // Int32 value = (Int32)cmd.ExecuteScalar();
                 //Set Command type of command object
                 //1.StoredProcedure
                 //2.TableDirect
                 //3.Text   (By Default)
-
-                cmd.CommandType = CommandType.Text;
-
+               
+                cmd2.CommandType = CommandType.Text;
+               
                 //Set Command text Property of command object.........
 
-                cmd.CommandText = "Insert into contacto values (7, @nombre,@email,@comentario)";
+               
+                cmd2.CommandText = "select max(id) +1 from contacto";
 
                 // Se tiene que modificar para pasarle +1 en el ID
+               
+                
 
-                //Assign values as `parameter`. It avoids `SQL Injection`
-              //  cmd.Parameters.AddWithValue("@value", value);
-                cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                cmd.Parameters.AddWithValue("@email", txtMail.Text);
-                cmd.Parameters.AddWithValue("@comentario", txtAreaComentario.Text);
-
-
-
-
-              
 
                 // Execute command by calling following method................
                 //1.ExecuteNonQuery()
@@ -82,17 +67,52 @@ namespace WebApplication_TP1.MasterEquipos
                 //3.ExecuteReader()
                 //   Return one or more than one record.
 
-                cmd.ExecuteNonQuery();
+
+                //Int32 value = (Int32)cmd2.ExecuteScalar();
+                value = Convert.ToInt32(cmd2.ExecuteScalar().ToString());
+                //int Result = int.Parse(Command.ExecuteScalar().ToString());
+
+
+                cmd.CommandText = "Insert into contacto values (@value, @nombre,@email,@comentario)";
+
+                //Assign values as `parameter`. It avoids `SQL Injection`
+                cmd.Parameters.AddWithValue("@value", value);
+                cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                cmd.Parameters.AddWithValue("@email", txtMail.Text);
+                cmd.Parameters.AddWithValue("@comentario", txtAreaComentario.Text);
+
+               cmd.ExecuteNonQuery();
+              
+
+               
+
+
                 con.Close();
 
 
-                Response.Redirect("~/MasterEquipos/contacto-resultado.aspx");
+               
+
+               /*  ====================================
+                * 
+                * 
+                * 
+                * lINEAS DE PRUEBA PARA RECUPERAR SOLO EL VALOR DEL ID*/
+               
+               // SqlCommand command = new SqlCommand("select max(id) +1 from contacto");
+                               
+                //command.Connection = con;
+                        
+               // Int32 value = (Int32)cmd.ExecuteScalar();
+               //string myString = value.ToString();
+               // grabo.Text = myString;
+               Response.Redirect("~/MasterEquipos/contacto-resultado.aspx");
             }
 
 
             catch (Exception ex)
             {
-                grabo.Text =  ex.Message;
+               grabo.Text =  ex.Message;
+
                 //throw;
             }
 
