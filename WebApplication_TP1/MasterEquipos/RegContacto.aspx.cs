@@ -25,22 +25,30 @@ namespace WebApplication_TP1.MasterEquipos
            try
             {
                 int value = 0;
+
                 //create  object  of Connection Class..................
                 SqlConnection con = new SqlConnection();
 
                 // Set Connection String property of Connection object..................
-                //con.ConnectionString = "Data Source=pcnora;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
-                con.ConnectionString = "Data Source=MW78BCNSUGPW3E;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
-                // Open Connection..................
+               
+               //con.ConnectionString = "Data Source=pcnora;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
+                
+               con.ConnectionString = "Data Source=MW78BCNSUGPW3E;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
+               
+               // Se tiene que ver la forma de no tener el servidor local de la pc harcodeado en el string 
+               // Open Connection..................
                 con.Open();
                
                 //Create object of Command Class................
-                SqlCommand cmd2 = new SqlCommand(); // PRUEBA PARA RECUPERAR EL ID
+                // Se crean 2, uno para el insert y otro para obtener el ID 
+                SqlCommand cmd2 = new SqlCommand(); 
 
                 SqlCommand cmd = new SqlCommand();
+
                 //set Connection Property  of  Command object.............
-                cmd.Connection = con;
-                cmd2.Connection = con;// PRUEBA PARA RECUPERAR EL ID
+               // Se crean 2, uno para el insert y otro para obtener el ID 
+               cmd.Connection = con; 
+                cmd2.Connection = con;
 
                 //Set Command type of command object
                 //1.StoredProcedure
@@ -51,13 +59,8 @@ namespace WebApplication_TP1.MasterEquipos
                
                 //Set Command text Property of command object.........
 
-               
-                cmd2.CommandText = "select max(id) +1 from contacto";
-
-                // Se tiene que modificar para pasarle +1 en el ID
-               
-                
-
+               // recupero el mayor ID de contacto para el nuevo insert
+                cmd2.CommandText = "select max(id) from contacto";
 
                 // Execute command by calling following method................
                 //1.ExecuteNonQuery()
@@ -67,12 +70,19 @@ namespace WebApplication_TP1.MasterEquipos
                 //3.ExecuteReader()
                 //   Return one or more than one record.
 
+               object valor = (object)cmd2.ExecuteScalar();
 
-                //Int32 value = (Int32)cmd2.ExecuteScalar();
-                value = Convert.ToInt32(cmd2.ExecuteScalar().ToString());
-                //int Result = int.Parse(Command.ExecuteScalar().ToString());
+                if (valor == null || valor == DBNull.Value)
+                {
+                    value = 0; // Si el max ID es null tomo 0
 
-
+                }
+                else
+                {
+                   int i = int.Parse(valor.ToString()); // convierto a int lo que devuelve el executescalar
+                    value = i + 1; //Incremento 1 
+                }
+             
                 cmd.CommandText = "Insert into contacto values (@value, @nombre,@email,@comentario)";
 
                 //Assign values as `parameter`. It avoids `SQL Injection`
@@ -81,30 +91,11 @@ namespace WebApplication_TP1.MasterEquipos
                 cmd.Parameters.AddWithValue("@email", txtMail.Text);
                 cmd.Parameters.AddWithValue("@comentario", txtAreaComentario.Text);
 
-               cmd.ExecuteNonQuery();
+               cmd.ExecuteNonQuery(); // Ejecuta el insert
               
+               con.Close();
 
-               
-
-
-                con.Close();
-
-
-               
-
-               /*  ====================================
-                * 
-                * 
-                * 
-                * lINEAS DE PRUEBA PARA RECUPERAR SOLO EL VALOR DEL ID*/
-               
-               // SqlCommand command = new SqlCommand("select max(id) +1 from contacto");
-                               
-                //command.Connection = con;
-                        
-               // Int32 value = (Int32)cmd.ExecuteScalar();
-               //string myString = value.ToString();
-               // grabo.Text = myString;
+              
                Response.Redirect("~/MasterEquipos/contacto-resultado.aspx");
             }
 
@@ -112,7 +103,7 @@ namespace WebApplication_TP1.MasterEquipos
             catch (Exception ex)
             {
                grabo.Text =  ex.Message;
-
+                //con.Close();
                 //throw;
             }
 
