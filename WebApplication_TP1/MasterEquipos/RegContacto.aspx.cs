@@ -31,9 +31,9 @@ namespace WebApplication_TP1.MasterEquipos
 
                 // Set Connection String property of Connection object..................
                
-               //con.ConnectionString = "Data Source=pcnora;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
+               con.ConnectionString = "Data Source=pcnora;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
                 
-               con.ConnectionString = "Data Source=MW78BCNSUGPW3E;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
+              // con.ConnectionString = "Data Source=MW78BCNSUGPW3E;Initial Catalog=PW3_20152C_TP2_Torneos;Integrated Security=True";
                
                // Se tiene que ver la forma de no tener el servidor local de la pc harcodeado en el string 
                // Open Connection..................

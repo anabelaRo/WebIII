@@ -6,9 +6,24 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHomeCenterIzq" runat="server">
 
     <ul id="menuVertical">
-        <li> <a href="/MasterAdministracion/RegEquipo.aspx">Crear Equipo</a> </li>
-        <li> <a href="/MasterAdministracion/RegJugador.aspx">Crear Jugador</a> </li>
-        <li> <a href="/MasterAdministracion/RegTorneo.aspx">Crear Torneo</a> </li>
+        <li> <a href="/MasterAdministracion/RegEquipo.aspx"> Equipo</a> </li>
+         <ul>
+            <li> <a href="/MasterAdministracion/RegEquipo.aspx">Crear Equipo</a> </li>
+            <li> <a href="/MasterAdministracion/RegJugador.aspx">Modificar Equipo</a> </li>
+            <li> <a href="/MasterAdministracion/RegJugador.aspx">Eiminar Equipo</a> </li>
+        </ul>
+        <li> <a href="/MasterAdministracion/RegJugador.aspx"> Jugador</a> </li>
+        <ul>
+            <li> <a href="/MasterAdministracion/RegJugador.aspx">Crear Jugador</a> </li>
+            <li> <a href="/MasterAdministracion/RegJugador.aspx">Modificar Jugador</a> </li>
+            <li> <a href="/MasterAdministracion/RegJugador.aspx">Eiminar Jugador</a> </li>
+        </ul>
+        <li> <a href="/MasterAdministracion/RegTorneo.aspx"> Torneo</a> </li>
+          <ul>
+            <li> <a href="/MasterAdministracion/RegTorneo.aspx">Crear Torneo</a> </li>
+            <li> <a href="/MasterAdministracion/RegJugador.aspx">Modificar Torneo</a> </li>
+            <li> <a href="/MasterAdministracion/RegJugador.aspx">Eiminar Torneo</a> </li>
+        </ul>
     </ul>
 
 </asp:Content>
