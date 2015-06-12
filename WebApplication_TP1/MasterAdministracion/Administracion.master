@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentHomeCenterIzq" runat="server">
-
+<%--
     <ul id="menuVertical">
         <li> <a href="/MasterAdministracion/RegEquipo.aspx"> Equipo</a> </li>
          <ul>
@@ -24,8 +24,41 @@
             <li> <a href="/MasterAdministracion/RegJugador.aspx">Modificar Torneo</a> </li>
             <li> <a href="/MasterAdministracion/RegJugador.aspx">Eiminar Torneo</a> </li>
         </ul>
-    </ul>
+    </ul>--%>
 
+     <%--   <ul id="menuVertical">
+        <li> <a href="/MasterAdministracion/RegEquipo.aspx">Crear Equipo</a> </li>
+        <li> <a href="/MasterAdministracion/RegJugador.aspx">Crear Jugador</a> </li>
+        <li> <a href="/MasterAdministracion/RegTorneo.aspx">Crear Torneo</a> </li>
+    </ul>--%>
+<ul class="dropdown-menu2" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+  
+  <li class="dropdown-submenu2">
+    <a tabindex="-1" href="/MasterAdministracion/RegJugador.aspx">Jugador</a>
+    <ul class="dropdown-menu2">
+      <li><a tabindex="-1" href="/MasterAdministracion/RegJugador.aspx">Crear Jugador</a></li>
+      <li><a href="#">Modificar Jugador</a></li>
+      <li><a href="#">Eliminar Jugador</a></li>
+    </ul>
+  </li>
+  <li class="divider"></li>
+   <li class="dropdown-submenu2">
+    <a tabindex="-1" href="/MasterAdministracion/RegEquipo.aspx">Equipo</a>
+    <ul class="dropdown-menu2">
+      <li><a tabindex="-1" href="/MasterAdministracion/RegEquipo.aspx">Crear Equipo</a></li>
+      <li><a href="#">Modificar Equipo</a></li>
+      <li><a href="#">Eliminar Equipo</a></li>
+    </ul>
+  </li>
+   <li class="divider"></li>
+   <li class="dropdown-submenu2">
+    <a tabindex="-1" href="/MasterAdministracion/RegTorneo.aspx">Torneo</a>
+    <ul class="dropdown-menu2">
+      <li><a tabindex="-1" href="/MasterAdministracion/RegTorneo.aspx">Crear Torneo</a></li>
+      <li><a href="#">Modificar Torneo</a></li>
+      <li><a href="#">Eliminar Torneo</a></li>
+    </ul>
+  </li>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHomeCenterMed" runat="server">
@@ -33,3 +66,4 @@
     <asp:ContentPlaceHolder ID="ContentAdministracionCenterMed" runat="server"></asp:ContentPlaceHolder>
 
 </asp:Content>
+
