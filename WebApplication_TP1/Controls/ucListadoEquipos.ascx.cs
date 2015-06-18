@@ -13,5 +13,10 @@ namespace WebApplication_TP1.Controls
         {
 
         }
+
+        protected void chkTorneosActivos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

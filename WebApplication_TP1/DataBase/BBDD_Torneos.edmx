@@ -228,7 +228,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="Model1">
+      <Diagram Name="BBDD_Torneos">
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Contacto" Width="1.5" PointX="0.75" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Equipo" Width="1.5" PointX="3" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Jugador" Width="1.5" PointX="5.25" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />

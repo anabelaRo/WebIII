@@ -19,12 +19,12 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region Metadatos de relaciones en EDM
 
-[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel", "FK_Equipo_Torneo", "Torneo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication_TP1.Torneo), "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication_TP1.Equipo), true)]
-[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel", "FK_Jugador_Equipo", "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebApplication_TP1.Equipo), "Jugador", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication_TP1.Jugador), true)]
+[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel", "FK_Equipo_Torneo", "Torneo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication_TP1.DataBase.Torneo), "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication_TP1.DataBase.Equipo), true)]
+[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel", "FK_Jugador_Equipo", "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebApplication_TP1.DataBase.Equipo), "Jugador", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication_TP1.DataBase.Jugador), true)]
 
 #endregion
 
-namespace WebApplication_TP1
+namespace WebApplication_TP1.DataBase
 {
     #region Contextos
     

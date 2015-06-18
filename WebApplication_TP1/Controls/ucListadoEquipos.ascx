@@ -12,10 +12,16 @@
 		</div>
 		<div class="col-sm-4">
 			<asp:Label ID="lblTorneosActivos" runat="server" Text="Mostrar sólo torneos activos "/>
-			<asp:CheckBox ID="chkTorneosActivos" runat="server" />
+			<asp:CheckBox ID="chkTorneosActivos" runat="server" onclick="recuperarEquipos();" />
 		</div>
 	</div>
 	<br />
+
+
+    <select id="ddlLocalidad" runat="server"></select>
+
+    <br />
+
 	<div class="row">
 		<div class="col-sm-5">Equipo</div>
 		<div class="col-sm-4">Torneo en el que participa</div>

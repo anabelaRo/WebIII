@@ -17,7 +17,7 @@ namespace WebApplication_TP1.MasterAdministracion
 
             if (!IsPostBack)
             {
-                PW3_20152C_TP2_TorneosEntities dbContext = new PW3_20152C_TP2_TorneosEntities();
+                DataBase.PW3_20152C_TP2_TorneosEntities dbContext = new DataBase.PW3_20152C_TP2_TorneosEntities();
                 ddlTorneos.DataValueField = "ID";
                 ddlTorneos.DataTextField = "Nombre";
                 ddlTorneos.DataSource = dbContext.Torneo.ToList();
