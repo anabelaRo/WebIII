@@ -18,7 +18,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="NombreCompleto" Type="nvarchar" Nullable="false" MaxLength="250" />
     <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="250" />
     <Property Name="Comentario" Type="nvarchar(max)" Nullable="false" />
@@ -27,7 +27,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
     <Property Name="MontoAbonado" Type="int" />
     <Property Name="IdTorneo" Type="int" />
@@ -36,7 +36,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
     <Property Name="Apellido" Type="nvarchar" Nullable="false" MaxLength="250" />
     <Property Name="Edad" Type="int" />
@@ -46,7 +46,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
     <Property Name="Activo" Type="bit" Nullable="false" />
   </EntityType>

@@ -55,8 +55,8 @@
     <a tabindex="-1" href="/MasterAdministracion/RegTorneo.aspx">Torneo</a>
     <ul class="dropdown-menu2">
       <li><a tabindex="-1" href="/MasterAdministracion/RegTorneo.aspx">Crear Torneo</a></li>
-      <li><a href="#">Modificar Torneo</a></li>
-      <li><a href="#">Eliminar Torneo</a></li>
+      <li><a href="/MasterAdministracion/ModTorneo.aspx">Modificar Torneo</a></li>
+      <li><a href="/MasterAdministracion/EliTorneo.aspx">Eliminar Torneo</a></li>
     </ul>
   </li>
 </asp:Content>
