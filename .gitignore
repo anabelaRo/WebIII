@@ -4,3 +4,6 @@
 WebApplication_TP1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.csdl
 WebApplication_TP1/obj/Debug/edmxResourcesToEmbed/DataBase/BBDD_Torneos.ssdl
+WebApplication_TP1/Web.config
+*.ssdl
+WebApplication_TP1/obj/Debug/edmxResourcesToEmbed/DataBase/BBDD_Torneos.ssdl
