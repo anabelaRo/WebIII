@@ -1,14 +1,15 @@
-function recuperarEquipos() {
-    /*var data = "{" +
-                    "'idProvincia':'" + $('#ddlProvincia').val() + "'" +
+$(document).ready(function () {
+    var data = "{" +
+                    "'incluirDeTorneosInactivos':'false'" +
                 "}";
-    consultarLocalidadesDeUnaProvincia(data);*/
 
-    //Falta recuperar el valor el Check:
-    //alert($('#ContentHomeCenterMed_ContentEquiposCenterMed_abcdooter_chkTorneosActivos'));
+    enviarDatosEquipos(data);
+});
+
+function recuperarEquipos(act) {
 
     var data = "{" +
-                    "'incluirDeTorneosInactivos:true'" +
+                    "'incluirDeTorneosInactivos':'" + act.checked + "'" +
                 "}";
 
     enviarDatosEquipos(data);
@@ -18,38 +19,41 @@ function enviarDatosEquipos(data) {
     $.support.cors = true;
 
     $.ajax({
-        type: "POST",
-        url: "/WebServices/servicio.asmx/ObtenerEquipos",
-        data: data,
-        async: true, //por defecto es true
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function (response) {
-            //Este chequeo es para compatibilidad con versiones anteriores a 3.5 del framework
-            //donde un servicio retornaba sin el .d
-            //vaciarLocalidades();
-
-            if (response.d.length > 0) {
-                mostarEquipos(response.d);
+        type: "POST",                                       //Tipo de llamada
+        url: "/WebServices/servicio.asmx/ObtenerEquipos",   //Dirección del WebMethod, o sea, Página.aspx/Método
+        data: data,                                         //Parámetros para pasarle al método 
+        async: true,                                        //Por defecto es true
+        contentType: "application/json; charset=utf-8",     //Tipo de contenido
+        dataType: "json",                                   //Tipo de datos
+        success: function (response) {                      //Función a la cual llamar cuando se pudo llamar satisfactoriamente al método
+            if (response.d.length > 0) {                    //Este chequeo es para compatibilidad con versiones anteriores a 3.5 del framework
+                mostarEquipos(response.d);                  //donde un servicio retornaba sin el .d
             }
-        },
-        error: function (xhr, status, error) {//cualquier error del lado servidor sale por este evento
+         },
+        error: function (xhr, status, error) {              //Cualquier error del lado servidor sale por este evento
             debugger;
             alert(xhr.responseText);
         }
     });
-
 }
 
-/*function vaciarLocalidades() {
-    $('#ddlLocalidad').find('option').remove().end();
-}*/
+function mostarEquipos(equipos) {
+    var cuerpo_Div = "";
+    var desActivo = "";
 
-function mostarEquipos(localidades) {
+    $.each(equipos, function (index, obj) {
 
-    $.each(localidades, function (index, obj) {
-        $('#ContentHomeCenterMed_ContentEquiposCenterMed_abcdooter_ddlLocalidad').append(
-                        $('<option></option>').val(obj.Id).html(obj.Nombre)
-                    );
+        if (obj.Activo)
+            desActivo = "Activo";
+        else
+            desActivo = "Inactivo";
+
+        cuerpo_Div = cuerpo_Div + "<div class='row'>" +
+                                        "<div class='col-sm-5'>" + obj.NombreEquipo + "</div>" +
+                                        "<div class='col-sm-4'>" + obj.NombreTorneo + "</div>" +
+                                        "<div class='col-sm-3'>" + desActivo + "</div>" +
+                                  "</div>";
     });
+
+    document.getElementById("list_Equipos").innerHTML = cuerpo_Div;  
 }

@@ -73,6 +73,10 @@
     <Content Include="MasterAdministracion\RegTorneo.aspx" />
     <Content Include="MasterEquipos\ListadoEquipos.aspx" />
     <Content Include="MasterEquipos\RegContacto.aspx" />
+    <EntityDeploy Include="DataBase\BBDD_Torneos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BBDD_Torneos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Service References\ServiceReference1\servicio.disco" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -89,7 +93,7 @@
     </Content>
     <Content Include="WebServices\servicio.asmx" />
     <None Include="Service References\ServiceReference1\servicio.wsdl" />
-    <None Include="Service References\ServiceReference1\WebApplication_TP1.ServiceReference1.Equipo.datasource">
+    <None Include="Service References\ServiceReference1\WebApplication_TP1.ServiceReference1.EquiposDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
@@ -190,7 +194,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="WebServices\Datos\EquiposDTO.cs" />
-    <Compile Include="WebServices\Entidades\EntEquipo.cs" />
     <Compile Include="WebServices\EquipoServices.cs" />
     <Compile Include="WebServices\servicio.asmx.cs">
       <DependentUpon>servicio.asmx</DependentUpon>
@@ -198,10 +201,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="DataBase\BBDD_Torneos.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BBDD_Torneos.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
