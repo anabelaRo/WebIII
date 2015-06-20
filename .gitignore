@@ -1,0 +1,6 @@
+*.dll
+*.pdb
+*.dll
+WebApplication_TP1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.csdl
+WebApplication_TP1/obj/Debug/edmxResourcesToEmbed/DataBase/BBDD_Torneos.ssdl

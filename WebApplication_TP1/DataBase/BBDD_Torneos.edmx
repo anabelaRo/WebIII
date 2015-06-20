@@ -23,7 +23,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="NombreCompleto" Type="nvarchar" Nullable="false" MaxLength="250" />
           <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="250" />
           <Property Name="Comentario" Type="nvarchar(max)" Nullable="false" />
@@ -32,7 +32,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
           <Property Name="MontoAbonado" Type="int" />
           <Property Name="IdTorneo" Type="int" />
@@ -41,7 +41,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
           <Property Name="Apellido" Type="nvarchar" Nullable="false" MaxLength="250" />
           <Property Name="Edad" Type="int" />
@@ -51,7 +51,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="250" />
           <Property Name="Activo" Type="bit" Nullable="false" />
         </EntityType>
@@ -102,7 +102,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="Comentario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -111,7 +111,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="MontoAbonado" Type="Int32" />
           <Property Name="IdTorneo" Type="Int32" />
@@ -122,7 +122,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="Apellido" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="Edad" Type="Int32" />
@@ -133,7 +133,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="Activo" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Equipo" Relationship="PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo" FromRole="Torneo" ToRole="Equipo" />
@@ -229,7 +229,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="BBDD_Torneos">
-        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Contacto" Width="1.5" PointX="0.75" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Contacto" Width="1.5" PointX="2" PointY="3.5" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Equipo" Width="1.5" PointX="3" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Jugador" Width="1.5" PointX="5.25" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Torneo" Width="1.5" PointX="0.75" PointY="1.125" Height="1.7879850260416657" IsExpanded="true" />

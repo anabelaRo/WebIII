@@ -73,6 +73,10 @@
     <Content Include="MasterAdministracion\RegTorneo.aspx" />
     <Content Include="MasterEquipos\ListadoEquipos.aspx" />
     <Content Include="MasterEquipos\RegContacto.aspx" />
+    <EntityDeploy Include="DataBase\BBDD_Torneos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BBDD_Torneos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Service References\ServiceReference1\servicio.disco" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -198,10 +202,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="DataBase\BBDD_Torneos.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BBDD_Torneos.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
