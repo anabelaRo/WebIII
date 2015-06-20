@@ -18,7 +18,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
     <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
     <Property Name="Comentario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -27,7 +27,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
     <Property Name="MontoAbonado" Type="Int32" />
     <Property Name="IdTorneo" Type="Int32" />
@@ -38,7 +38,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
     <Property Name="Apellido" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
     <Property Name="Edad" Type="Int32" />
@@ -49,7 +49,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
     <Property Name="Activo" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Equipo" Relationship="PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo" FromRole="Torneo" ToRole="Equipo" />

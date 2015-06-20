@@ -9,304 +9,160 @@
 //------------------------------------------------------------------------------
 
 namespace WebApplication_TP1.ServiceReference1 {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EquiposDTO", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class EquiposDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreEquipoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreTorneoField;
+        
+        private bool ActivoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string NombreEquipo {
+            get {
+                return this.NombreEquipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreEquipoField, value) != true)) {
+                    this.NombreEquipoField = value;
+                    this.RaisePropertyChanged("NombreEquipo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string NombreTorneo {
+            get {
+                return this.NombreTorneoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreTorneoField, value) != true)) {
+                    this.NombreTorneoField = value;
+                    this.RaisePropertyChanged("NombreTorneo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public bool Activo {
+            get {
+                return this.ActivoField;
+            }
+            set {
+                if ((this.ActivoField.Equals(value) != true)) {
+                    this.ActivoField = value;
+                    this.RaisePropertyChanged("Activo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.servicioSoap")]
     public interface servicioSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        string HelloWorld();
-        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerEquiposResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ObtenerEquipos", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RelatedEnd))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructuralObject))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Equipo[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityKeyMember[]))]
-        WebApplication_TP1.ServiceReference1.Equipo[] ObtenerEquipos(bool incluirDeTorneosInactivos);
+        WebApplication_TP1.ServiceReference1.ObtenerEquiposResponse ObtenerEquipos(WebApplication_TP1.ServiceReference1.ObtenerEquiposRequest request);
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class Equipo : EntityObject {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerEquiposRequest {
         
-        private int idField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerEquipos", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication_TP1.ServiceReference1.ObtenerEquiposRequestBody Body;
         
-        private string nombreField;
-        
-        private System.Nullable<int> montoAbonadoField;
-        
-        private System.Nullable<int> idTorneoField;
-        
-        private EntityReferenceOfTorneo torneoReferenceField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("Id");
-            }
+        public ObtenerEquiposRequest() {
         }
         
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("Nombre");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public System.Nullable<int> MontoAbonado {
-            get {
-                return this.montoAbonadoField;
-            }
-            set {
-                this.montoAbonadoField = value;
-                this.RaisePropertyChanged("MontoAbonado");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public System.Nullable<int> IdTorneo {
-            get {
-                return this.idTorneoField;
-            }
-            set {
-                this.idTorneoField = value;
-                this.RaisePropertyChanged("IdTorneo");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public EntityReferenceOfTorneo TorneoReference {
-            get {
-                return this.torneoReferenceField;
-            }
-            set {
-                this.torneoReferenceField = value;
-                this.RaisePropertyChanged("TorneoReference");
-            }
+        public ObtenerEquiposRequest(WebApplication_TP1.ServiceReference1.ObtenerEquiposRequestBody Body) {
+            this.Body = Body;
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class EntityReferenceOfTorneo : EntityReference {
-    }
-    
-    /// <comentarios/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityReferenceOfTorneo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class EntityReference : RelatedEnd {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerEquiposRequestBody {
         
-        private EntityKey entityKeyField;
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool incluirDeTorneosInactivos;
         
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public EntityKey EntityKey {
-            get {
-                return this.entityKeyField;
-            }
-            set {
-                this.entityKeyField = value;
-                this.RaisePropertyChanged("EntityKey");
-            }
+        public ObtenerEquiposRequestBody() {
+        }
+        
+        public ObtenerEquiposRequestBody(bool incluirDeTorneosInactivos) {
+            this.incluirDeTorneosInactivos = incluirDeTorneosInactivos;
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerEquiposResponse {
         
-        private string entitySetNameField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerEquiposResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebApplication_TP1.ServiceReference1.ObtenerEquiposResponseBody Body;
         
-        private string entityContainerNameField;
-        
-        private EntityKeyMember[] entityKeyValuesField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string EntitySetName {
-            get {
-                return this.entitySetNameField;
-            }
-            set {
-                this.entitySetNameField = value;
-                this.RaisePropertyChanged("EntitySetName");
-            }
+        public ObtenerEquiposResponse() {
         }
         
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string EntityContainerName {
-            get {
-                return this.entityContainerNameField;
-            }
-            set {
-                this.entityContainerNameField = value;
-                this.RaisePropertyChanged("EntityContainerName");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
-        public EntityKeyMember[] EntityKeyValues {
-            get {
-                return this.entityKeyValuesField;
-            }
-            set {
-                this.entityKeyValuesField = value;
-                this.RaisePropertyChanged("EntityKeyValues");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
+        public ObtenerEquiposResponse(WebApplication_TP1.ServiceReference1.ObtenerEquiposResponseBody Body) {
+            this.Body = Body;
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class EntityKeyMember : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ObtenerEquiposResponseBody {
         
-        private string keyField;
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WebApplication_TP1.ServiceReference1.EquiposDTO[] ObtenerEquiposResult;
         
-        private object valueField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-                this.RaisePropertyChanged("Key");
-            }
+        public ObtenerEquiposResponseBody() {
         }
         
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public object Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityReference))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityReferenceOfTorneo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class RelatedEnd : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityObject))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Equipo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class StructuralObject : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Equipo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34234")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class EntityObject : StructuralObject {
-        
-        private EntityKey entityKeyField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public EntityKey EntityKey {
-            get {
-                return this.entityKeyField;
-            }
-            set {
-                this.entityKeyField = value;
-                this.RaisePropertyChanged("EntityKey");
-            }
+        public ObtenerEquiposResponseBody(WebApplication_TP1.ServiceReference1.EquiposDTO[] ObtenerEquiposResult) {
+            this.ObtenerEquiposResult = ObtenerEquiposResult;
         }
     }
     
@@ -337,12 +193,17 @@ namespace WebApplication_TP1.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string HelloWorld() {
-            return base.Channel.HelloWorld();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebApplication_TP1.ServiceReference1.ObtenerEquiposResponse WebApplication_TP1.ServiceReference1.servicioSoap.ObtenerEquipos(WebApplication_TP1.ServiceReference1.ObtenerEquiposRequest request) {
+            return base.Channel.ObtenerEquipos(request);
         }
         
-        public WebApplication_TP1.ServiceReference1.Equipo[] ObtenerEquipos(bool incluirDeTorneosInactivos) {
-            return base.Channel.ObtenerEquipos(incluirDeTorneosInactivos);
+        public WebApplication_TP1.ServiceReference1.EquiposDTO[] ObtenerEquipos(bool incluirDeTorneosInactivos) {
+            WebApplication_TP1.ServiceReference1.ObtenerEquiposRequest inValue = new WebApplication_TP1.ServiceReference1.ObtenerEquiposRequest();
+            inValue.Body = new WebApplication_TP1.ServiceReference1.ObtenerEquiposRequestBody();
+            inValue.Body.incluirDeTorneosInactivos = incluirDeTorneosInactivos;
+            WebApplication_TP1.ServiceReference1.ObtenerEquiposResponse retVal = ((WebApplication_TP1.ServiceReference1.servicioSoap)(this)).ObtenerEquipos(inValue);
+            return retVal.Body.ObtenerEquiposResult;
         }
     }
 }

@@ -6,6 +6,7 @@
 		<ol class="breadcrumb">
 			<li>Inicio</li>
 			<li>Administración</li>
+            <li>Torneos</li>
 			<li class="active">Crear Torneo</li>
 		</ol>
 		<h3>Crear Torneo:</h3>
@@ -27,8 +28,8 @@
 				</div>
 				<div class="col-md-4">
 					<asp:RadioButtonList ID="radBtnLstEstado" runat="server">
-						<asp:ListItem Text ="Activo" Value="1" Selected="True"> Activo</asp:ListItem>
-						<asp:ListItem Text ="Activo" Value="0" > Inactivo</asp:ListItem>
+						<asp:ListItem Text ="Activo" Value= "True" Selected="True"> Activo</asp:ListItem>
+						<asp:ListItem Text ="Activo" Value= "False" > Inactivo</asp:ListItem>
                         <%--Agrego los values para insertar en la bbdd--%>
 					</asp:RadioButtonList>
 				</div>

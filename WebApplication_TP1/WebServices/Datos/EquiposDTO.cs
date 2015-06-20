@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebApplication_TP1.WebServices.Entidades;
+using WebApplication_TP1.DataBase;
 
 namespace WebApplication_TP1.WebServices.Datos
 {
     public class EquiposDTO
     {
         //Entidades:
-        public string Id { get; set; }
-        public string Nombre { get; set; }
-        public string MontoAbonado { get; set; }
-        public string IdTorneo { get; set; }
+        public string NombreEquipo { get; set; }
+        public string NombreTorneo { get; set; }
+        public bool Activo { get; set; }
 
         //Constructor por defecto:
         public EquiposDTO()
@@ -21,14 +20,13 @@ namespace WebApplication_TP1.WebServices.Datos
         }
 
         //Constructor parametrizado:
-        public EquiposDTO(EntEquipo equipoEnt)
+        public EquiposDTO(Equipo equipoEnt, string torneoEnt, bool activo)
         {
             if (equipoEnt != null)
             {
-                this.Id = equipoEnt.Id.ToString();
-                this.Nombre = equipoEnt.Nombre.ToString();
-                this.MontoAbonado = equipoEnt.MontoAbonado.ToString();
-                this.IdTorneo = equipoEnt.IdTorneo.ToString();
+                this.NombreEquipo = equipoEnt.Nombre;
+                this.NombreTorneo = torneoEnt;
+                this.Activo = activo;
             }
         }
     }

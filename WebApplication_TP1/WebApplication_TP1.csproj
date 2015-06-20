@@ -55,6 +55,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterAdministracion\EliTorneo.aspx" />
+    <Content Include="MasterAdministracion\ModTorneo.aspx" />
     <Content Include="MasterEquipos\contacto-resultado.aspx" />
     <Content Include="ContenidoHome.aspx" />
     <Content Include="Controls\ucFooter.ascx" />
@@ -93,7 +95,7 @@
     </Content>
     <Content Include="WebServices\servicio.asmx" />
     <None Include="Service References\ServiceReference1\servicio.wsdl" />
-    <None Include="Service References\ServiceReference1\WebApplication_TP1.ServiceReference1.Equipo.datasource">
+    <None Include="Service References\ServiceReference1\WebApplication_TP1.ServiceReference1.EquiposDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
@@ -102,6 +104,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BBDD_Torneos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\EliTorneo.aspx.cs">
+      <DependentUpon>EliTorneo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\EliTorneo.aspx.designer.cs">
+      <DependentUpon>EliTorneo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModTorneo.aspx.cs">
+      <DependentUpon>ModTorneo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModTorneo.aspx.designer.cs">
+      <DependentUpon>ModTorneo.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterEquipos\contacto-resultado.aspx.cs">
       <DependentUpon>contacto-resultado.aspx</DependentUpon>
@@ -194,7 +210,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="WebServices\Datos\EquiposDTO.cs" />
-    <Compile Include="WebServices\Entidades\EntEquipo.cs" />
     <Compile Include="WebServices\EquipoServices.cs" />
     <Compile Include="WebServices\servicio.asmx.cs">
       <DependentUpon>servicio.asmx</DependentUpon>
