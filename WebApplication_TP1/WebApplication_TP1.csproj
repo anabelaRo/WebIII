@@ -55,6 +55,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterAdministracion\EliTorneo.aspx" />
+    <Content Include="MasterAdministracion\ModTorneo.aspx" />
     <Content Include="MasterEquipos\contacto-resultado.aspx" />
     <Content Include="ContenidoHome.aspx" />
     <Content Include="Controls\ucFooter.ascx" />
@@ -102,6 +104,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BBDD_Torneos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\EliTorneo.aspx.cs">
+      <DependentUpon>EliTorneo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\EliTorneo.aspx.designer.cs">
+      <DependentUpon>EliTorneo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModTorneo.aspx.cs">
+      <DependentUpon>ModTorneo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModTorneo.aspx.designer.cs">
+      <DependentUpon>ModTorneo.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterEquipos\contacto-resultado.aspx.cs">
       <DependentUpon>contacto-resultado.aspx</DependentUpon>
