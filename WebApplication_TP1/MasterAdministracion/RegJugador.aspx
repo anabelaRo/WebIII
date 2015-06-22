@@ -7,6 +7,7 @@
 		<ol class="breadcrumb">
 			<li>Inicio</li>
 			<li>Administración</li>
+            <li>Jugadores</li>
 			<li class="active">Crear Jugador</li>
 		</ol>
 		<h3>Crear Jugador:</h3>
@@ -66,7 +67,7 @@
 				<div class="col-md-4 col-md-offset-4">
 					<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
 					<br /><br />
-					<asp:Label ID="lblJugCreado" runat="server" Text="lala"></asp:Label>
+					<asp:Label ID="lblJugCreado" runat="server" Text=""></asp:Label>
 				</div>
 			</div>
 		</div>

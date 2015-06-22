@@ -46,7 +46,7 @@ namespace WebApplication_TP1.MasterAdministracion
 				dc.AddToTorneo(t);
 				dc.SaveChanges();
 
-				lblTorCreado.Text = "Equipo registrado exitosamente";
+				lblTorCreado.Text = "Torneo registrado exitosamente";
 			}
 
 			catch (Exception ex)

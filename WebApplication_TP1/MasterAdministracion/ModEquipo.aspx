@@ -5,6 +5,7 @@
 		<ol class="breadcrumb">
 			<li>Inicio</li>
 			<li>Administración</li>
+            <li>Equipos</li>
 			<li class="active">Modificar Equipo</li>
 		</ol>
 		<h3>Modificar Equipo:</h3>
