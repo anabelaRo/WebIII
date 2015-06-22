@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="PW3_20152C_TP2_TorneosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="PW3_20152C_TP2_TorneosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="PW3_20152C_TP2_TorneosModelStoreContainer">
           <EntitySet Name="Contacto" EntityType="PW3_20152C_TP2_TorneosModel.Store.Contacto" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Equipo" EntityType="PW3_20152C_TP2_TorneosModel.Store.Equipo" store:Type="Tables" Schema="dbo" />
@@ -79,7 +79,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PW3_20152C_TP2_TorneosModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -228,7 +229,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="BBDD_Torneos">
-        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Contacto" Width="1.5" PointX="2" PointY="3.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Contacto" Width="1.5" PointX="0.75" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Equipo" Width="1.5" PointX="3" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Jugador" Width="1.5" PointX="5.25" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="PW3_20152C_TP2_TorneosModel.Torneo" Width="1.5" PointX="0.75" PointY="1.125" Height="1.7879850260416657" IsExpanded="true" />

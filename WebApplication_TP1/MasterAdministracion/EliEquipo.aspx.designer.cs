@@ -10,42 +10,42 @@
 namespace WebApplication_TP1.MasterAdministracion {
     
     
-    public partial class ModTorneo {
+    public partial class EliEquipo {
         
         /// <summary>
-        /// Control lblTorneo.
+        /// Control lblEquipo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTorneo;
+        protected global::System.Web.UI.WebControls.Label lblEquipo;
         
         /// <summary>
-        /// Control ddlTorneos.
+        /// Control ddlEquipos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTorneos;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEquipos;
         
         /// <summary>
-        /// Control btnBajaTorneo.
+        /// Control btnBajaEquipo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBajaTorneo;
+        protected global::System.Web.UI.WebControls.Button btnBajaEquipo;
         
         /// <summary>
-        /// Control lblTorEliminado.
+        /// Control lblEquEliminado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTorEliminado;
+        protected global::System.Web.UI.WebControls.Label lblEquEliminado;
     }
 }

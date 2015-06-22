@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterAdministracion/Administracion.master" AutoEventWireup="true" CodeBehind="RegEquipo.aspx.cs" Inherits="WebApplication_TP1.MasterAdministracion.RegEquipo" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentAdministracionCenterMed" runat="server">
-
 	<div id="divEquipo">
 		<ol class="breadcrumb">
 			<li>Inicio</li>

@@ -7,62 +7,53 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication_TP1.MasterAdministracion
 {
-    public partial class ModTorneo : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                DataBase.PW3_20152C_TP2_TorneosEntities dbContext = new DataBase.PW3_20152C_TP2_TorneosEntities();
-                ddlTorneos.DataValueField = "ID";
-                ddlTorneos.DataTextField = "Nombre";
-                ddlTorneos.DataSource = dbContext.Torneo.ToList();
+	public partial class ModTorneo : System.Web.UI.Page
+	{
+		DataBase.PW3_20152C_TP2_TorneosEntities dc = new DataBase.PW3_20152C_TP2_TorneosEntities();
 
-                ddlTorneos.DataBind();
-             
-            }
-        }
+		protected void Page_Load(object sender, EventArgs e)
+		{
+			if (!IsPostBack)
+			{
+				ddlTorneos.DataValueField = "ID";
+				ddlTorneos.DataTextField = "Nombre";
+				ddlTorneos.DataSource = dc.Torneo.ToList();
 
-        protected void btnCrear_Click(object sender, EventArgs e)
-        {
-         if (ddlTorneos.SelectedItem.Value != "0") {
-            
-             
-             DataBase.PW3_20152C_TP2_TorneosEntities bbdd = new DataBase.PW3_20152C_TP2_TorneosEntities();
+				ddlTorneos.DataBind();
+			}
+		}
 
-             int seltorneo =   Convert.ToInt32(ddlTorneos.SelectedItem.Value);
-             var seltorneo2 = ddlTorneos.SelectedItem.Text;
+		protected void btnBajaTorneo_Click(object sender, EventArgs e)
+		{
+			if (ddlTorneos.SelectedItem.Value != "0")
+			{
+				int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
+				var seltorneo2 = ddlTorneos.SelectedItem.Text;
 
-             var elitorneo = (from t in bbdd.Torneo
-                              where t.Id == seltorneo
-                              select t).First();
+				var elitorneo = (  from t in dc.Torneo
+								  where t.Id == seltorneo
+								 select t).First();
 
-             //Levanto todos los equipos asociados al torneo, y les seteo torneo = NULL
-             var query = from eq in bbdd.Equipo
-                         where eq.IdTorneo == seltorneo
-                         select eq;
-             foreach (var eq in query) eq.IdTorneo = null;
-             bbdd.SaveChanges();
+				//Levanto todos los equipos asociados al torneo, y les seteo torneo = NULL
+				var query = from eq in dc.Equipo
+							 where eq.IdTorneo == seltorneo
+							 select eq;
+				foreach (var eq in query) eq.IdTorneo = null;
+				dc.SaveChanges();
 
+				//Elimino el torneo seleccionado
+				dc.Torneo.DeleteObject(elitorneo);
+				dc.SaveChanges();
 
-             //Elimino el torneo seleccionado
+				//Cargo de nuevo el ddl, no se lista el último eliminado
+				ddlTorneos.DataValueField = "ID";
+				ddlTorneos.DataTextField = "Nombre";
+				ddlTorneos.DataSource = dc.Torneo.ToList();
 
+				ddlTorneos.DataBind();
 
-             bbdd.Torneo.DeleteObject(elitorneo);
-             bbdd.SaveChanges();
-
-
-             //Cargo de nuevo el ddl, no se lista el último eliminado
-             DataBase.PW3_20152C_TP2_TorneosEntities dbContext = new DataBase.PW3_20152C_TP2_TorneosEntities();
-             ddlTorneos.DataValueField = "ID";
-             ddlTorneos.DataTextField = "Nombre";
-             ddlTorneos.DataSource = dbContext.Torneo.ToList();
-
-             ddlTorneos.DataBind();
-
-             lblTorEliminado.Text = "Se ha eliminado exitosamente el torneo: " + seltorneo2;
-            }
-         
-        }
-        }
-    }
+				lblTorEliminado.Text = "Se ha eliminado exitosamente el torneo: " + seltorneo2;
+			}
+		}
+	}
+}

@@ -26,8 +26,6 @@ namespace WebApplication_TP1.MasterAdministracion
             }
         }
 
-       
-
         protected void btnSig_Click(object sender, EventArgs e)
         {
             DataBase.PW3_20152C_TP2_TorneosEntities bbdd = new DataBase.PW3_20152C_TP2_TorneosEntities();

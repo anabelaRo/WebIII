@@ -55,7 +55,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterAdministracion\EliEquipo.aspx" />
+    <Content Include="MasterAdministracion\EliJugador.aspx" />
     <Content Include="MasterAdministracion\EliTorneo.aspx" />
+    <Content Include="MasterAdministracion\ModEquipo.aspx" />
+    <Content Include="MasterAdministracion\ModJugador.aspx" />
     <Content Include="MasterAdministracion\ModTorneo.aspx" />
     <Content Include="MasterEquipos\contacto-resultado.aspx" />
     <Content Include="ContenidoHome.aspx" />
@@ -105,12 +109,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BBDD_Torneos.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MasterAdministracion\EliEquipo.aspx.cs">
+      <DependentUpon>EliEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\EliEquipo.aspx.designer.cs">
+      <DependentUpon>EliEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\EliJugador.aspx.cs">
+      <DependentUpon>EliJugador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\EliJugador.aspx.designer.cs">
+      <DependentUpon>EliJugador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterAdministracion\EliTorneo.aspx.cs">
       <DependentUpon>EliTorneo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterAdministracion\EliTorneo.aspx.designer.cs">
       <DependentUpon>EliTorneo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModEquipo.aspx.cs">
+      <DependentUpon>ModEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModEquipo.aspx.designer.cs">
+      <DependentUpon>ModEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModJugador.aspx.cs">
+      <DependentUpon>ModJugador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdministracion\ModJugador.aspx.designer.cs">
+      <DependentUpon>ModJugador.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterAdministracion\ModTorneo.aspx.cs">
       <DependentUpon>ModTorneo.aspx</DependentUpon>

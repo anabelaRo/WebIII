@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterAdministracion/Administracion.master" AutoEventWireup="true" CodeBehind="EliTorneo.aspx.cs" Inherits="WebApplication_TP1.MasterAdministracion.ModTorneo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentAdministracionCenterMed" runat="server">
 
-<div id="divTorneo">
+	<div id="divTorneo">
 		<ol class="breadcrumb">
 			<li>Inicio</li>
 			<li>Administración</li>
@@ -21,18 +21,16 @@
 					<asp:Label ID="lblTorneo" runat="server" Text="Torneo:"/>
 				</div>
 				<div class="col-md-4">
-					
-                    <div class="col-md-4">
-					<asp:DropDownList ID="ddlTorneos" runat="server" class="form-control">
-
-					</asp:DropDownList>
+					<div class="col-md-4">
+						<asp:DropDownList ID="ddlTorneos" runat="server" class="form-control">
+						</asp:DropDownList>
+					</div>
 				</div>
 			</div>
 			<br />
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
-					<asp:Button ID="btnCrear" runat="server" Text="Eliminar" onclick="btnCrear_Click"  class="btn btn-default"
-                    OnClientClick="return confirm('¿Esta seguro que desea eliminar este torneo?');return false;"/>
+					<asp:Button ID="btnBajaTorneo" runat="server" Text="Eliminar" onclick="btnBajaTorneo_Click" class="btn btn-default" OnClientClick="return confirm('¿Esta seguro que desea eliminar este torneo?');return false;"/>
                     </div> <br />	
                     <br />	<br /><asp:Label ID="lblTorEliminado" runat="server" Text=""></asp:Label>
 				

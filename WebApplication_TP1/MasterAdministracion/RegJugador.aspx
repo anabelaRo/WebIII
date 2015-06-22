@@ -30,7 +30,7 @@
 					<asp:TextBox ID="txtApellido" runat="server" class="form-control"/>
 				</div>
 				<div class="col-md-5">
-					<asp:RequiredFieldValidator ID="valReqTxtApellido" runat="server" ErrorMessage="El apellido es Obligatorio" ControlToValidate="txtApellido" Display="Static"  Enabled="true" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RequiredFieldValidator ID="valReqTxtApellido" runat="server" ErrorMessage="El apellido es Obligatorio" ControlToValidate="txtApellido" Display="Static" Enabled="true" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"></asp:RequiredFieldValidator>
 				</div>
 			</div>
 			<div class="row">
@@ -43,7 +43,7 @@
 				<div class="col-md-5">
 					<asp:RequiredFieldValidator ID="valReqTxtEdad" runat="server" ErrorMessage="La edad es Obligatoria" ControlToValidate="txtEdad" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger">
 					</asp:RequiredFieldValidator>
-                    <asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"/>
+					<asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"/>
 				</div>
 			</div>
 			<div class="row">
@@ -64,8 +64,9 @@
 			<br/>
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
-				<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
-                	<br />	<br /><asp:Label ID="lblJugCreado" runat="server" Text="lala"></asp:Label>
+					<asp:Button ID="btnCrear" runat="server" Text="Crear" onclick="btnCrear_Click" class="btn btn-default"/>
+					<br /><br />
+					<asp:Label ID="lblJugCreado" runat="server" Text="lala"></asp:Label>
 				</div>
 			</div>
 		</div>
