@@ -24,27 +24,32 @@ namespace WebApplication_TP1.MasterAdministracion
 
 		protected void btnBajaJugador_Click(object sender, EventArgs e)
 		{
-			if (ddlJugadores.SelectedItem.Value != "0")
-			{
-				int seljugador = Convert.ToInt32(ddlJugadores.SelectedItem.Value);
-				var seljugador2 = ddlJugadores.SelectedItem.Text;
+			Page.Validate();
 
-				var elijugador = (  from t in dc.Jugador
-								   where t.Id == seljugador
-								  select t).First();
+            if (Page.IsValid)
+            {
+                if (ddlJugadores.SelectedItem.Value != "0")
+                {
+                    int seljugador = Convert.ToInt32(ddlJugadores.SelectedItem.Value);
+                    var seljugador2 = ddlJugadores.SelectedItem.Text;
 
-				//Elimino el jugador seleccionado
-				dc.Jugador.DeleteObject(elijugador);
-				dc.SaveChanges();
+                    var elijugador = (from t in dc.Jugador
+                                      where t.Id == seljugador
+                                      select t).First();
 
-				//Cargo de nuevo el ddl, no se lista el último eliminado
-				ddlJugadores.DataValueField = "ID";
-				ddlJugadores.DataTextField = "Apellido";
-				ddlJugadores.DataSource = dc.Jugador.ToList();
-				ddlJugadores.DataBind();
+                    //Elimino el jugador seleccionado
+                    dc.Jugador.DeleteObject(elijugador);
+                    dc.SaveChanges();
 
-				lblJugEliminado.Text = "Se ha eliminado exitosamente el jugador: " + seljugador2;
-			}
+                    //Cargo de nuevo el ddl, no se lista el último eliminado
+                    ddlJugadores.DataValueField = "ID";
+                    ddlJugadores.DataTextField = "Apellido";
+                    ddlJugadores.DataSource = dc.Jugador.ToList();
+                    ddlJugadores.DataBind();
+
+                    lblJugEliminado.Text = "Se ha eliminado exitosamente el jugador: " + seljugador2;
+                }
+            }
 		}
 	}
 }

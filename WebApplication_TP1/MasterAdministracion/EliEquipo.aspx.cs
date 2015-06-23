@@ -24,36 +24,41 @@ namespace WebApplication_TP1.MasterAdministracion
 
 		protected void btnBajaEquipo_Click(object sender, EventArgs e)
 		{
-			if (ddlEquipos.SelectedItem.Value != "0")
-			{
-				int selequipo = Convert.ToInt32(ddlEquipos.SelectedItem.Value);
-				var selequipo2 = ddlEquipos.SelectedItem.Text;
+			Page.Validate();
 
-				var eliequipo = (from t in dc.Equipo
-								 where t.Id == selequipo
-								 select t).First();
+            if (Page.IsValid)
+            {
+                if (ddlEquipos.SelectedItem.Value != "0")
+                {
+                    int selequipo = Convert.ToInt32(ddlEquipos.SelectedItem.Value);
+                    var selequipo2 = ddlEquipos.SelectedItem.Text;
 
-				//Levanto todos los jugadores asociados al equipo, y los elimino
-				var query = from ju in dc.Jugador
-							where ju.IdEquipo == selequipo
-							select ju;
+                    var eliequipo = (from t in dc.Equipo
+                                     where t.Id == selequipo
+                                     select t).First();
 
-				foreach (var ju in query)
-				{
-					dc.Jugador.DeleteObject(ju);
-				}
-				
-				dc.Equipo.DeleteObject(eliequipo);
-				dc.SaveChanges();
+                    //Levanto todos los jugadores asociados al equipo, y los elimino
+                    var query = from ju in dc.Jugador
+                                where ju.IdEquipo == selequipo
+                                select ju;
 
-				//Cargo de nuevo el ddl, no se lista el último eliminado
-				ddlEquipos.DataValueField = "ID";
-				ddlEquipos.DataTextField = "Nombre";
-				ddlEquipos.DataSource = dc.Equipo.ToList();
-				ddlEquipos.DataBind();
+                    foreach (var ju in query)
+                    {
+                        dc.Jugador.DeleteObject(ju);
+                    }
 
-				lblEquEliminado.Text = "Se ha eliminado exitosamente el equipo: " + selequipo2;
-			}
+                    dc.Equipo.DeleteObject(eliequipo);
+                    dc.SaveChanges();
+
+                    //Cargo de nuevo el ddl, no se lista el último eliminado
+                    ddlEquipos.DataValueField = "ID";
+                    ddlEquipos.DataTextField = "Nombre";
+                    ddlEquipos.DataSource = dc.Equipo.ToList();
+                    ddlEquipos.DataBind();
+
+                    lblEquEliminado.Text = "Se ha eliminado exitosamente el equipo: " + selequipo2;
+                }
+            }
 		}
 	}
 }

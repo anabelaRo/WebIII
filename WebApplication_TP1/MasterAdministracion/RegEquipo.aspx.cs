@@ -29,35 +29,37 @@ namespace WebApplication_TP1.MasterAdministracion
 			// Para que haga las validaciones
 			Page.Validate();
 
-			try
-			{
-				DataBase.Equipo eq = new DataBase.Equipo();
-				eq.Nombre = txtNombre.Text;
-				eq.MontoAbonado = Convert.ToInt32(txtMonto.Text);
+            if (Page.IsValid)
+            {
+                try
+                {
+                    DataBase.Equipo eq = new DataBase.Equipo();
+                    eq.Nombre = txtNombre.Text;
+                    eq.MontoAbonado = Convert.ToInt32(txtMonto.Text);
 
-				//Si no eligió torneo, no le pasamos nada para que lo inserte
-				if (ddlTorneos.SelectedItem != null)
-				{
-					string text = ddlTorneos.SelectedItem.Text;
-					string id_torneo = ddlTorneos.SelectedItem.Value;
+                    //Si no eligió torneo, no le pasamos nada para que lo inserte
+                    if (ddlTorneos.SelectedItem != null)
+                    {
+                        string text = ddlTorneos.SelectedItem.Text;
+                        string id_torneo = ddlTorneos.SelectedItem.Value;
 
-					if (id_torneo != "0")
-					{
-						eq.IdTorneo = Convert.ToInt32(ddlTorneos.SelectedValue);
-					}
-				}
+                        if (id_torneo != "0")
+                        {
+                            eq.IdTorneo = Convert.ToInt32(ddlTorneos.SelectedValue);
+                        }
+                    }
 
-				dc.AddToEquipo(eq);
-				dc.SaveChanges();
+                    dc.AddToEquipo(eq);
+                    dc.SaveChanges();
 
-				lblEquCreado.Text = "Equipo registrado exitosamente";
-			}
-
-			catch (Exception ex)
-			{
-				lblEquCreado.Text = ex.Message;
-				//throw;
-			}
+                    lblEquCreado.Text = "Equipo registrado exitosamente";
+                }
+                catch (Exception ex)
+                {
+                    lblEquCreado.Text = ex.Message;
+                    //throw;
+                }
+            }
 		}
 	}
 }

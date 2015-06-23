@@ -20,7 +20,7 @@
 					<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
 				</div>
 				<div class="col-md-5">
-					<asp:RequiredFieldValidator ID="valReqTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RequiredFieldValidator ID="valReqTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" CssClass="label label-danger"></asp:RequiredFieldValidator>
 					<asp:RegularExpressionValidator ValidationExpression="^.{1,250}$" ID="longTxtNombre" runat="server" ErrorMessage="El nombre no puede superar los 250 caracteres." ControlToValidate="txtNombre"></asp:RegularExpressionValidator>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 					<asp:TextBox ID="txtApellido" runat="server" class="form-control"/>
 				</div>
 				<div class="col-md-5">
-					<asp:RequiredFieldValidator ID="valReqTxtApellido" runat="server" ErrorMessage="El apellido es Obligatorio" ControlToValidate="txtApellido" Display="Static" Enabled="true" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RequiredFieldValidator ID="valReqTxtApellido" runat="server" ErrorMessage="El apellido es Obligatorio" ControlToValidate="txtApellido" Display="Static" Enabled="true" EnableClientScript="True" CssClass="label label-danger"></asp:RequiredFieldValidator>
 					<asp:RegularExpressionValidator ValidationExpression="^.{1,250}$" ID="longTxtApellido" runat="server" ErrorMessage="El apellido no puede superar los 250 caracteres." ControlToValidate="txtApellido"></asp:RegularExpressionValidator>
 				</div>
 			</div>
@@ -44,9 +44,9 @@
 					<asp:TextBox ID="txtEdad" runat="server" class="form-control"/>
 				</div>
 				<div class="col-md-5">
-					<asp:RequiredFieldValidator ID="valReqTxtEdad" runat="server" ErrorMessage="La edad es Obligatoria" ControlToValidate="txtEdad" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger">
+					<asp:RequiredFieldValidator ID="valReqTxtEdad" runat="server" ErrorMessage="La edad es Obligatoria" ControlToValidate="txtEdad" Display="Static" EnableClientScript="true" Enabled="true" CssClass="label label-danger">
 					</asp:RequiredFieldValidator>
-					<asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"/>
+					<asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" EnableClientScript="True" CssClass="label label-danger"/>
 					<asp:RangeValidator ID="valRangoTxtEdad" runat="server" ControlToValidate="txtEdad" Type="Integer" MinimumValue="15" MaximumValue="120" ErrorMessage="La edad está fuera de rango"></asp:RangeValidator>
 				</div>
 			</div>
@@ -62,7 +62,7 @@
 					</asp:DropDownList>
 				</div>
 				<div class="col-md-4">
-					<asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlEquipos" Display="Static" ControlToValidate="ddlEquipos" runat="server" ErrorMessage="Debe elegir un equipo" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RequiredFieldValidator InitialValue="0" ID="reqValDdlEquipos" Display="Static" ControlToValidate="ddlEquipos" runat="server" ErrorMessage="Debe elegir un equipo" EnableClientScript="true" Enabled="true" CssClass="label label-danger"></asp:RequiredFieldValidator>
 				</div>
 			</div>
 			<br/>

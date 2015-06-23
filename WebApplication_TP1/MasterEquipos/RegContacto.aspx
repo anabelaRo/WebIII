@@ -17,7 +17,7 @@
 					<asp:TextBox ID="txtNombre" runat="server" class="form-control"/>
 				</div>
 				<div class="col-md-5">
-					<asp:RequiredFieldValidator ID="valReqTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RequiredFieldValidator ID="valReqTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" CssClass="label label-danger"></asp:RequiredFieldValidator>
 					<asp:RegularExpressionValidator ValidationExpression="^.{1,250}$" ID="longTxtNombre" runat="server" ErrorMessage="El nombre no puede superar los 250 caracteres." ControlToValidate="txtNombre"></asp:RegularExpressionValidator>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 					<asp:TextBox ID="txtMail" runat="server" class="form-control"/>
 				</div>
 				<div class="col-md-5">
-					<asp:RequiredFieldValidator ID="valReqTtxtMail" runat="server" ErrorMessage="El mail es Obligatorio" ControlToValidate="txtMail" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RequiredFieldValidator ID="valReqTtxtMail" runat="server" ErrorMessage="El mail es Obligatorio" ControlToValidate="txtMail" Display="Static" EnableClientScript="true" Enabled="true" CssClass="label label-danger"></asp:RequiredFieldValidator>
 					<asp:RegularExpressionValidator id="valRegExpTtxtMail" runat ="server" ErrorMessage="Ingrese un email correcto" ControlToValidate="txtMail" ValidationExpression="\S+@\S+\.\S+\w+" EnableClientScript="true" CssClass="label label-danger"></asp:RegularExpressionValidator>
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 					<asp:TextBox id="txtAreaComentario" TextMode="multiline" Columns="20" Rows="3" runat="server"/>
 				</div>
 				<div class="col-md-5">
-					<asp:RequiredFieldValidator ID="valReqAreaComentario" runat="server" ErrorMessage="El comentario es Obligatorio" ControlToValidate="txtAreaComentario" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+					<asp:RequiredFieldValidator ID="valReqAreaComentario" runat="server" ErrorMessage="El comentario es Obligatorio" ControlToValidate="txtAreaComentario" Display="Static" EnableClientScript="true" Enabled="true" CssClass="label label-danger"></asp:RequiredFieldValidator>
 				</div>
 			</div>
 			<br />

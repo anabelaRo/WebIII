@@ -21,8 +21,6 @@ namespace WebApplication_TP1.MasterAdministracion
                 ddlTorneos.DataSource = dbContext.Torneo.ToList();
 
                 ddlTorneos.DataBind();
-               
-
             }
         }
 
@@ -33,8 +31,6 @@ namespace WebApplication_TP1.MasterAdministracion
             int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
             var seltorneo2 = ddlTorneos.SelectedItem.Text;
 
-
-          
             modificar1.Visible = false;
             modificar2.Visible = true;
 
@@ -47,49 +43,46 @@ namespace WebApplication_TP1.MasterAdministracion
             if (elitorneo.Activo == true)
             {
                 radBtnLstEstado.SelectedValue = "True";
-
             }
-
             else
             {
                 radBtnLstEstado.SelectedValue = "False";
             }
-
-             
-          
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
 			Page.Validate();
-			
-			try
-			{
-				int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
 
-				var a = Convert.ToBoolean(radBtnLstEstado.SelectedValue);
+            if (Page.IsValid)
+            {
+                try
+                {
+                    int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
 
-				DataBase.PW3_20152C_TP2_TorneosEntities bbdd = new DataBase.PW3_20152C_TP2_TorneosEntities();
+                    var a = Convert.ToBoolean(radBtnLstEstado.SelectedValue);
 
-				var query = from to in bbdd.Torneo
-							where to.Id == seltorneo
-							select to;
-            
-				foreach (var to in query) to.Nombre = txtNombre.Text;
-				foreach (var to in query) to.Activo = a;
-				bbdd.SaveChanges();
+                    DataBase.PW3_20152C_TP2_TorneosEntities bbdd = new DataBase.PW3_20152C_TP2_TorneosEntities();
 
-				modificar1.Visible = false;
-				modificar2.Visible = true;
+                    var query = from to in bbdd.Torneo
+                                where to.Id == seltorneo
+                                select to;
 
-				lblTorModificado.Text = "Torneo modificado exitosamente";
-			}
+                    foreach (var to in query) to.Nombre = txtNombre.Text;
+                    foreach (var to in query) to.Activo = a;
+                    bbdd.SaveChanges();
 
-			catch (Exception ex)
-			{
-				lblTorModificado.Text = ex.Message;
-				//throw;
-			}
+                    modificar1.Visible = false;
+                    modificar2.Visible = true;
+
+                    lblTorModificado.Text = "Torneo modificado exitosamente";
+                }
+                catch (Exception ex)
+                {
+                    lblTorModificado.Text = ex.Message;
+                    //throw;
+                }
+            }
         }
     }
 }

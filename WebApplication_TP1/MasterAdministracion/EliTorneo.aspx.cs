@@ -25,35 +25,40 @@ namespace WebApplication_TP1.MasterAdministracion
 
 		protected void btnBajaTorneo_Click(object sender, EventArgs e)
 		{
-			if (ddlTorneos.SelectedItem.Value != "0")
-			{
-				int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
-				var seltorneo2 = ddlTorneos.SelectedItem.Text;
+			Page.Validate();
 
-				var elitorneo = (  from t in dc.Torneo
-								  where t.Id == seltorneo
-								 select t).First();
+            if (Page.IsValid)
+            {
+                if (ddlTorneos.SelectedItem.Value != "0")
+                {
+                    int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
+                    var seltorneo2 = ddlTorneos.SelectedItem.Text;
 
-				//Levanto todos los equipos asociados al torneo, y les seteo torneo = NULL
-				var query = from eq in dc.Equipo
-							 where eq.IdTorneo == seltorneo
-							 select eq;
-				foreach (var eq in query) eq.IdTorneo = null;
-				dc.SaveChanges();
+                    var elitorneo = (from t in dc.Torneo
+                                     where t.Id == seltorneo
+                                     select t).First();
 
-				//Elimino el torneo seleccionado
-				dc.Torneo.DeleteObject(elitorneo);
-				dc.SaveChanges();
+                    //Levanto todos los equipos asociados al torneo, y les seteo torneo = NULL
+                    var query = from eq in dc.Equipo
+                                where eq.IdTorneo == seltorneo
+                                select eq;
+                    foreach (var eq in query) eq.IdTorneo = null;
+                    dc.SaveChanges();
 
-				//Cargo de nuevo el ddl, no se lista el último eliminado
-				ddlTorneos.DataValueField = "ID";
-				ddlTorneos.DataTextField = "Nombre";
-				ddlTorneos.DataSource = dc.Torneo.ToList();
+                    //Elimino el torneo seleccionado
+                    dc.Torneo.DeleteObject(elitorneo);
+                    dc.SaveChanges();
 
-				ddlTorneos.DataBind();
+                    //Cargo de nuevo el ddl, no se lista el último eliminado
+                    ddlTorneos.DataValueField = "ID";
+                    ddlTorneos.DataTextField = "Nombre";
+                    ddlTorneos.DataSource = dc.Torneo.ToList();
 
-				lblTorEliminado.Text = "Se ha eliminado exitosamente el torneo: " + seltorneo2;
-			}
+                    ddlTorneos.DataBind();
+
+                    lblTorEliminado.Text = "Se ha eliminado exitosamente el torneo: " + seltorneo2;
+                }
+            }
 		}
 	}
 }

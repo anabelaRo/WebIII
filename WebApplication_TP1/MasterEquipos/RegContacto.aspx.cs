@@ -23,23 +23,25 @@ namespace WebApplication_TP1.MasterEquipos
 			//[AR] Para que haga las validaciones
 			Page.Validate();
 
-			try
-			{
-				DataBase.Contacto c = new DataBase.Contacto();
-				c.NombreCompleto = txtNombre.Text;
-				c.Email = txtMail.Text;
-				c.Comentario = txtAreaComentario.Text;
-				dc.AddToContacto(c);
-				dc.SaveChanges();
+            if (Page.IsValid)
+            {
+                try
+                {
+                    DataBase.Contacto c = new DataBase.Contacto();
+                    c.NombreCompleto = txtNombre.Text;
+                    c.Email = txtMail.Text;
+                    c.Comentario = txtAreaComentario.Text;
+                    dc.AddToContacto(c);
+                    dc.SaveChanges();
 
-				Response.Redirect("~/MasterEquipos/contacto-resultado.aspx");
-			}
-
-			catch (Exception ex)
-			{
-				grabo.Text = ex.Message;
-				//throw;
-			}
+                    Response.Redirect("~/MasterEquipos/contacto-resultado.aspx");
+                }
+                catch (Exception ex)
+                {
+                    grabo.Text = ex.Message;
+                    //throw;
+                }
+            }
 		}
 	}
 }

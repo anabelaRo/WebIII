@@ -32,29 +32,30 @@ namespace WebApplication_TP1.MasterAdministracion
 
 		protected void btnCrear_Click(object sender, EventArgs e)
 		{
-
 			Page.Validate();
 
-			try
-			{
-				DataBase.Jugador j = new DataBase.Jugador();
+            if (Page.IsValid)
+            {
+			    try
+			    {
+				    DataBase.Jugador j = new DataBase.Jugador();
 
-				j.Nombre = txtNombre.Text;
-				j.Apellido = txtApellido.Text;
-				j.Edad = Convert.ToInt32(txtEdad.Text);
-				j.IdEquipo = Convert.ToInt32(ddlEquipos.SelectedValue);
+				    j.Nombre = txtNombre.Text;
+				    j.Apellido = txtApellido.Text;
+				    j.Edad = Convert.ToInt32(txtEdad.Text);
+				    j.IdEquipo = Convert.ToInt32(ddlEquipos.SelectedValue);
 
-				dc.AddToJugador(j);
-				dc.SaveChanges();
+				    dc.AddToJugador(j);
+				    dc.SaveChanges();
 
-				lblJugCreado.Text = "Jugador registrado exitosamente";
-			}
-
-			catch (Exception ex)
-			{
-				lblJugCreado.Text = ex.Message;
-				//throw;
-			}
+				    lblJugCreado.Text = "Jugador registrado exitosamente";
+			    }
+			    catch (Exception ex)
+			    {
+				    lblJugCreado.Text = ex.Message;
+				    //throw;
+			    }
+            }
 		}
 	}
 }

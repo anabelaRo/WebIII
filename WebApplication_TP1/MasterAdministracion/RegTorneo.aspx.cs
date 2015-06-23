@@ -21,36 +21,38 @@ namespace WebApplication_TP1.MasterAdministracion
 			//Para que haga las validaciones
 			Page.Validate();
 
-			try
-			{
-				DataBase.Torneo t = new DataBase.Torneo();
-				t.Nombre = txtNombre.Text;
-				//t.Activo = radBtnLstEstado.SelectedValue;
+            if (Page.IsValid)
+            {
+                try
+                {
+                    DataBase.Torneo t = new DataBase.Torneo();
+                    t.Nombre = txtNombre.Text;
+                    //t.Activo = radBtnLstEstado.SelectedValue;
 
-				if (radBtnLstEstado.SelectedValue == "True")
-				{
-					t.Activo = true;
-				}
-				else if (radBtnLstEstado.SelectedValue == "False")
-				{
-					t.Activo = false;
-				}
-				else
-				{
-					throw new Exception("Error desconocido");
-				}
+                    if (radBtnLstEstado.SelectedValue == "True")
+                    {
+                        t.Activo = true;
+                    }
+                    else if (radBtnLstEstado.SelectedValue == "False")
+                    {
+                        t.Activo = false;
+                    }
+                    else
+                    {
+                        throw new Exception("Error desconocido");
+                    }
 
-				dc.AddToTorneo(t);
-				dc.SaveChanges();
+                    dc.AddToTorneo(t);
+                    dc.SaveChanges();
 
-				lblTorCreado.Text = "Torneo registrado exitosamente";
-			}
-
-			catch (Exception ex)
-			{
-				lblTorCreado.Text = ex.Message;
-				//throw;
-			}
+                    lblTorCreado.Text = "Torneo registrado exitosamente";
+                }
+                catch (Exception ex)
+                {
+                    lblTorCreado.Text = ex.Message;
+                    //throw;
+                }
+            }
 
 		}
 	}
