@@ -56,26 +56,36 @@ namespace WebApplication_TP1.MasterAdministracion
 
 		protected void btnModificar_Click(object sender, EventArgs e)
 		{
-			int seljugador = Convert.ToInt32(ddlJugadores.SelectedItem.Value);
+			Page.Validate();
 
-			var query = from to in dc.Jugador
-						where to.Id == seljugador
-						select to;
-
-			foreach (var to in query)
+			try
 			{
-				to.Nombre = txtNombre.Text;
-				to.Apellido = txtApellido.Text;
-				to.Edad = Convert.ToInt32(txtEdad.Text);
-				to.IdEquipo = Convert.ToInt32(ddlEquipos.SelectedValue);
+				int seljugador = Convert.ToInt32(ddlJugadores.SelectedItem.Value);
+
+				var query = from to in dc.Jugador
+							where to.Id == seljugador
+							select to;
+
+				foreach (var to in query)
+				{
+					to.Nombre = txtNombre.Text;
+					to.Apellido = txtApellido.Text;
+					to.Edad = Convert.ToInt32(txtEdad.Text);
+					to.IdEquipo = Convert.ToInt32(ddlEquipos.SelectedValue);
+				}
+
+				dc.SaveChanges();
+
+				modificar1.Visible = false;
+				modificar2.Visible = true;
+
+				lblJugModificado.Text = "Jugador modificado exitosamente";
 			}
-
-			dc.SaveChanges();
-
-			modificar1.Visible = false;
-			modificar2.Visible = true;
-
-			lblJugModificado.Text = "Jugador modificado exitosamente";
+			catch (Exception ex)
+			{
+				lblJugModificado.Text = ex.Message;
+				//throw;
+			}
 		}
 	}
 }

@@ -39,6 +39,7 @@
 					</div>
 					<div class="col-md-5">
 						<asp:RequiredFieldValidator ID="valReqTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+						<asp:RegularExpressionValidator ValidationExpression="^.{1,250}$" ID="longTxtNombre" runat="server" ErrorMessage="El nombre no puede superar los 250 caracteres." ControlToValidate="txtNombre"></asp:RegularExpressionValidator>
 					</div>
 				</div>
 				<div class="row">
@@ -50,6 +51,7 @@
 					</div>
 					<div class="col-md-5">
 						<asp:RequiredFieldValidator ID="valReqTxtApellido" runat="server" ErrorMessage="El apellido es Obligatorio" ControlToValidate="txtApellido" Display="Static" Enabled="true" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"></asp:RequiredFieldValidator>
+						<asp:RegularExpressionValidator ValidationExpression="^.{1,250}$" ID="longTxtApellido" runat="server" ErrorMessage="El apellido no puede superar los 250 caracteres." ControlToValidate="txtApellido"></asp:RegularExpressionValidator>
 					</div>
 				</div>
 				<div class="row">
@@ -63,6 +65,7 @@
 						<asp:RequiredFieldValidator ID="valReqTxtEdad" runat="server" ErrorMessage="La edad es Obligatoria" ControlToValidate="txtEdad" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger">
 						</asp:RequiredFieldValidator>
 						<asp:CompareValidator ID="valIntTxtEdad" runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtEdad" ErrorMessage="La edad debe ser un número entero" ValidationGroup="ValidacionOblig" EnableClientScript="True" CssClass="label label-danger"/>
+						<asp:RangeValidator ID="valRangoTxtEdad" runat="server" ControlToValidate="txtEdad" Type="Integer" MinimumValue="15" MaximumValue="120" ErrorMessage="La edad está fuera de rango"></asp:RangeValidator>
 					</div>
 				</div>
 				<div class="row">

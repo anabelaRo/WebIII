@@ -5,7 +5,7 @@
 		<ol class="breadcrumb">
 			<li>Inicio</li>
 			<li>Administración</li>
-            <li>Equipos</li>
+			<li>Equipos</li>
 			<li class="active">Modificar Equipo</li>
 		</ol>
 		<h3>Modificar Equipo:</h3>
@@ -38,6 +38,7 @@
 					</div>
 					<div class="col-md-5">
 						<asp:RequiredFieldValidator ID="reqValTxtNombre" runat="server" ErrorMessage="El nombre es Obligatorio" ControlToValidate="txtNombre" Display="Static" EnableClientScript="true" Enabled="true" ValidationGroup="ValidacionOblig" CssClass="label label-danger"></asp:RequiredFieldValidator>
+						<asp:RegularExpressionValidator ValidationExpression="^.{1,250}$" ID="longTxtNombre" runat="server" ErrorMessage="El nombre no puede superar los 250 caracteres." ControlToValidate="txtNombre"></asp:RegularExpressionValidator>
 					</div>
 				</div>
 				<div class="row">

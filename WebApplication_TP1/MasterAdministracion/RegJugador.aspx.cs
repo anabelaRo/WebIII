@@ -4,10 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-// Agrego estos dos correspondientes a ADO
-//using System.Data;
-//using System.Data.SqlClient;
-
 
 namespace WebApplication_TP1.MasterAdministracion
 {

@@ -198,3 +198,8 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
+*.pdb
+WebApplication_TP1/obj/Debug/WebApplication_TP1.csprojResolveAssemblyReference.cache
+*.cache
+*.suo
+*.pdb

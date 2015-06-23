@@ -85,6 +85,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator valReqTxtNombre;
         
         /// <summary>
+        /// Control longTxtNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator longTxtNombre;
+        
+        /// <summary>
         /// Control lblApellido.
         /// </summary>
         /// <remarks>
@@ -110,6 +119,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator valReqTxtApellido;
+        
+        /// <summary>
+        /// Control longTxtApellido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator longTxtApellido;
         
         /// <summary>
         /// Control lblEdad.
@@ -146,6 +164,15 @@ namespace WebApplication_TP1.MasterAdministracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator valIntTxtEdad;
+        
+        /// <summary>
+        /// Control valRangoTxtEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator valRangoTxtEdad;
         
         /// <summary>
         /// Control lblEquipo.

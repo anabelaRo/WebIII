@@ -61,25 +61,35 @@ namespace WebApplication_TP1.MasterAdministracion
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
-            int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
-         
+			Page.Validate();
+			
+			try
+			{
+				int seltorneo = Convert.ToInt32(ddlTorneos.SelectedItem.Value);
+
+				var a = Convert.ToBoolean(radBtnLstEstado.SelectedValue);
+
+				DataBase.PW3_20152C_TP2_TorneosEntities bbdd = new DataBase.PW3_20152C_TP2_TorneosEntities();
+
+				var query = from to in bbdd.Torneo
+							where to.Id == seltorneo
+							select to;
             
-            var a = Convert.ToBoolean(radBtnLstEstado.SelectedValue);
+				foreach (var to in query) to.Nombre = txtNombre.Text;
+				foreach (var to in query) to.Activo = a;
+				bbdd.SaveChanges();
 
-            DataBase.PW3_20152C_TP2_TorneosEntities bbdd = new DataBase.PW3_20152C_TP2_TorneosEntities();
+				modificar1.Visible = false;
+				modificar2.Visible = true;
 
-            var query = from to in bbdd.Torneo
-                        where to.Id == seltorneo
-                        select to;
-            
-            foreach (var to in query) to.Nombre = txtNombre.Text;
-            foreach (var to in query) to.Activo = a;
-            bbdd.SaveChanges();
+				lblTorModificado.Text = "Torneo modificado exitosamente";
+			}
 
-            modificar1.Visible = false;
-            modificar2.Visible = true;
-
-            lblTorModificado.Text = "Torneo modificado exitosamente";
+			catch (Exception ex)
+			{
+				lblTorModificado.Text = ex.Message;
+				//throw;
+			}
         }
     }
 }

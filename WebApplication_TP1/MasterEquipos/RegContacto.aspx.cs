@@ -21,7 +21,7 @@ namespace WebApplication_TP1.MasterEquipos
 		protected void btnRegistrar_Click(object sender, EventArgs e)
 		{
 			//[AR] Para que haga las validaciones
-			//Page.Validate();
+			Page.Validate();
 
 			try
 			{
